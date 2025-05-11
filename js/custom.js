@@ -36,6 +36,10 @@ function goToEvent() {
     $('html, body').animate({scrollTop: select.offsetTop}, 'slow');
 }
 
+function goToLeadership() {
+    const select = document.querySelector('#leadership-section');
+    $('html, body').animate({scrollTop: select.offsetTop}, 'slow');
+}
 
 function register() {
     window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSfsl6PW1S3CUUAMPZGY4oQBVZcJjkNNDJZ-s3_PKIxlGrfHrg/viewform';
