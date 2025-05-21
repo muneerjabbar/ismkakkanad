@@ -1,568 +1,514 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="ism" />
-  <meta name="description" content="ism kakkanad/>
-  <meta name="author" content="" />
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ISM Kakkanad Zone</title>
-
-  <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-  <!-- font awesome style -->
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-
-  <!-- Custom styles for this template -->
-  <link href="css/style.css?1" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
-  <style  type="text/css">
-    .contact_section {
-      background: #ddd;
+  <link rel="icon" href="images\Logo\ism-logo.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Added Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+   <style>
+    /* Additional styles for nav toggle */
+    .nav-links {
+      transition: none;
+      overflow: visible;
+      max-height: none;
+      flex-direction: column;
+      width: 100%;
+      display: none;
     }
-    .service_section .box .img-box.new {
-      width: 200px;
-      height: auto;
-    }
-    .service_section .box:hover .img-box.new img {
-      filter: none !important;
-    }
-    .nav-item a {
-      cursor: pointer;
-    }
-
-    .btn-box a.next {
-      display: inline-block;
-      font-family: 'Merriweather Sans', sans-serif;
-      text-transform: uppercase;
-      padding: 10px 45px;
-      background-color: transparent;
-      border: 1px solid #ec2126;
-      border-radius: 0;
-      color: #ec2126;
-    }
-    .social-box .box a {
-      padding: 0 16px;
-    }
-
-    .copy-btn {
-      background-color: #ec2126;
-      width: 40px;
-      height: 40px;
-      color: #fff;
+    .nav-links.show {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      margin: 20px auto;
-      cursor: pointer;
     }
-
-    .copy-btn i{
-      font-size: 20px;
+    @media (min-width: 640px) {
+      .nav-links {
+        flex-direction: row;
+        width: auto;
+        display: flex !important;
+      }
+      .nav-toggle {
+        display: none;
+      }
     }
-
-    .service_section.spec .box:hover {
-            background: #fff;
+    /* Navbar color and text improvements */
+    header.navbar {
+      background-color: #1e3a8a; /* Tailwind blue-800 */
     }
-
-    .service_section.spec .box:hover p {
-      color: #121212;
+    header.navbar a.logo {
+      color: #f3f4f6; /* Tailwind gray-100 */
     }
-
+    nav.nav-links a {
+      color: #e0e7ff; /* Tailwind indigo-200 */
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      transition: color 0.3s ease;
+      white-space: nowrap;
+      margin-left: 0;
+      margin-bottom: 0.5rem;
+    }
+    nav.nav-links a:last-child {
+      margin-bottom: 0;
+    }
+    nav.nav-links a:hover {
+      color: #fbbf24; /* Tailwind amber-400 */
+    }
+    /* Section background colors for visual appeal */
+    #programs {
+      background-color: #fef3c7; /* amber-100 */
+      color: #92400e; /* amber-800 */
+    }
+    #leadership {
+      background-color: #dbeafe; /* blue-100 */
+      color: #1e40af; /* blue-900 */
+    }
+    #about {
+      background-color: #d1fae5; /* green-100 */
+      color: #065f46; /* green-800 */
+    }
+    #units {
+      background-color: #fee2e2; /* red-100 */
+      color: #991b1b; /* red-800 */
+    }
+    #gallery {
+      background-color: #ede9fe; /* violet-100 */
+      color: #5b21b6; /* violet-800 */
+    }
+    #contact {
+      background-color: #f0f9ff; /* sky-100 */
+      color: #0c4a6e; /* sky-800 */
+    }
   </style>
-
 </head>
+  <body>
+  <!-- Navbar -->
+<header class="bg-blue-800 text-white fixed top-0 w-full z-50 shadow-md">
+  <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-2">
+      <img src="images/Logo/ism-logo.png" alt="ISM Kakkanad Logo" class="h-10 w-auto" />
+      <span class="text-gray-100 font-semibold text-lg select-none">ISM KAKKANAD</span>
+    </a>
 
-<body>
-  <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="header_bottom">
-        <div class="container-fluid">
-          <nav class="navbar navbar-expand-lg custom_nav-container ">
-            <a class="navbar-brand" href="index.html">
-              <img class="logo-img" src="images/Logo/ism-logo.png" alt="">
-            </a>
+    <!-- Hamburger Button (Mobile) -->
+    <button id="navToggle" class="text-white text-3xl sm:hidden focus:outline-none">
+      &#9776; <!-- This is ☰ -->
+    </button>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class=""> </span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ">
-                <li class="nav-item ">
-                  <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" onclick="goToEvent()">Upcoming events</a>      
-                </li>  
-                <li class="nav-item">
-                  <a class="nav-link" >Our Activities</a>
-                  <ul class="submenu">
-                    <li><a href="#" onclick="goToIsthiqama();">Isthiqama</a></li>
-                    <li><a href="#" onclick="goToQHLS();">QHLS</a></li>
-                    <li><a href="#" onclick="goToVelicham();">Velicham</a></li>
-                    <li><a href="#" onclick="goToEelaf();">Eelaf</a></li>
-                    <li><a href="#" onclick="goToInspire();">Inspire</a></li>
-                    <li><a href="#" onclick="goToFalaq();">Falaq</a></li>
-                  </ul>                  
-                </li>                                          
-                <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
-                  <ul class="submenu">
-                    <li><a href="#" onclick="goToAbout();">About Us</a></li>
-                    <li><a href="#" onclick="goToUnits();">Units</a></li>
-                    <li><a href="#" onclick="goToGallery();">Gallery</a></li>
-                    <li><a href="#" onclick="goToDonate();">Donate Us</a></li>
-                    <li><a href="#" onclick="goToContact();">Contact Us</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </div>
-    </header>
-    <!-- end header section -->
-    <!-- slider section -->
-    <section class="slider_section ">
-      <div class="container ">
-        <div class="row">
-          <div class="col-md-12 ">
-            <div id="owl-demo" class="owl-carousel owl-theme">
-              <div class="item"><img src="images/carousel/1.jpeg" alt="Leading Towards rectitude"></div>
-              <div class="item"><img src="images/carousel/2.jpeg" alt="Leading Towards rectitude"></div>
-              <div class="item"><img src="images/carousel/3.jpeg" alt="Workshop"></div>
-              <div class="item"><img src="images/carousel/4.jpeg" alt="Workshop"></div>
-              <div class="item"><img src="images/carousel/5.jpeg" alt="Workshop"></div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- end slider section -->
+    <!-- Nav Links -->
+    <nav id="navLinks" class="hidden sm:flex flex-col sm:flex-row sm:items-center sm:gap-6 absolute sm:static top-full right-4 bg-blue-800 sm:bg-transparent p-4 sm:p-0 rounded-md sm:rounded-none shadow-lg sm:shadow-none transition-all duration-300 ease-in-out">
+      <a href="#hero" class="block py-2 sm:py-0 hover:text-amber-400 text-indigo-200 font-semibold">Home</a>
+      <a href="#programs" class="block py-2 sm:py-0 hover:text-amber-400 text-indigo-200 font-semibold">Programs</a>
+      <a href="#leadership" class="block py-2 sm:py-0 hover:text-amber-400 text-indigo-200 font-semibold">Leadership</a>
+      <a href="#about" class="block py-2 sm:py-0 hover:text-amber-400 text-indigo-200 font-semibold">About</a>
+      <a href="#units" class="block py-2 sm:py-0 hover:text-amber-400 text-indigo-200 font-semibold">Units</a>
+      <a href="#events" class="block py-2 sm:py-0 hover:text-amber-400 text-indigo-200 font-semibold">Events</a>
+      <a href="#gallery" class="block py-2 sm:py-0 hover:text-amber-400 text-indigo-200 font-semibold">Gallery</a>
+      <a href="#contact" class="block py-2 sm:py-0 hover:text-amber-400 text-indigo-200 font-semibold">Contact</a>
+    </nav>
   </div>
-
-  <!-- feature section -->
-  <section class="feature_section">
-    <div class="container">
-      <div class="feature_container">
-        <div class="box" onclick="goToAbout()">
-          <div class="img-box">
-            <img class="logo-img" src="images/group.png" alt="">
-          </div>
-          <h5 class="name">
-            About us
-          </h5>
-        </div>
-        <div class="box" onclick="goToLeadership()">
-          <div class="img-box">
-            <img class="logo-img" src="images/edit.png" alt="">
-          </div>
-          <h5 class="name">
-            Leadership
-          </h5>
-        </div>
-        <div class="box" onclick="goToEvent()">
-          <div class="img-box">
-            <img class="logo-img" src="images/event.png" alt="">
-                 </div>
-          <h5 class="name">
-            Upcoming Events
-          </h5>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end feature section -->
-
-  <!-- about section -->
-
-  <section class="about_section layout_padding-bottom" id="about-sec" >
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 col-md-12">
-          <div class="detail-box">
-            <h2>
-              About us
-            </h2>
-            <p>
-              Ithihadu Shubbanil Mujaahideen (ISM) is the youth wing of Kerala Nadvathul Mujahideen (KNM), a reformist Islamic movement based in Kerala, India. Founded in the early 20th century, ISM aims to cultivate a morally upright, intellectually enlightened, and socially responsible generation of Muslim youth grounded in authentic Islamic teachings.
-            <p></p>    
-              ISM emphasizes Qur'an and Sunnah-based reform, rejecting superstition, innovations (bid‘ah), and un-Islamic cultural practices. It works through grassroots initiatives in education, dawah, literature, social service, and community development. With a motto of "Service to Humanity is Worship of Allah," ISM encourages youth to be proactive in social change while maintaining a deep spiritual and ethical foundation.
-            <p></p>    
-              The organization has significantly contributed to religious awareness, youth empowerment, and intellectual revival among Kerala’s Muslims. It runs various wings and projects, including programs for students, professionals, and families, ensuring Islam remains a lived and practical guide for modern life.
-            <p></p>    
-              Kerala Nadvathul Mujahideen (https://knm.org.in/) is a socio- religious organisation established in 1950 with K M Moulavi as founder president and N V Abdussalam moulavi as founder genaral Secretary.It is registered under societies registration act XXI of 1860 with No. 2/57. The organisation aims at the development and reformist activities of the society with focus on the upliftment of weaker sections of the society.
-            <p></p>    
-              The parent organization of KNM is Kerala Jamiyyathul Ulama, the first recognized forum of Muslim scholars in Kerala. KNM shares a close ideological affiliation with the All-India Jamaat-e-Ahl-i Hadith, a national-level movement committed to the same foundational principles of Tawheed (monotheism), adherence to authentic Hadith, and revival of Islamic values across India.
-            </p>
-            <!--<a href="about.html">
-              Read More
-            </a> -->
-          </div>
-        </div>
-        <div class="col-lg-7 col-md-6">
-          <div class="img-box">
-            <img src="images/about-img.jpg" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end about section -->
-
-
-  <!-- professional section -->
-
-  <section class="professional_section layout_padding" id="upcoming-event">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="img-box">
-            <img src="images/upcomingevent/upcomingevent1.jpeg" alt="">
-          </div>
-        </div>
-        <div class="col-md-6 ">
-          <div class="detail-box">
-            <h2>
-              Upcoming Event <br>
-            </h2>
-            <p>
-              Details about next Isthiqama ....bla bla... bla....bla bla... bla....bla bla... bla....bla bla... bla....bla bla... bla....bla bla... bla....bla bla... bla....bla bla... bla....bla bla... bla....bla bla... bla....bla bla... bla....bla bla... bla....bla bla... bla
-              </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- end professional section -->
-
-
-  <!-- Leadership section -->
-
-  <section class="about_section layout_padding-bottom" id="leadership-section" >
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 col-md-12">
-          <div class="detail-box">
-            <h2>
-              <br/><br/>Leadership
-            </h2>
-            <p>
-                <br/><br/>Our leadership team comprises dedicated individuals committed to upholding the vision and mission of ISM through strategic guidance, organizational excellence, and grassroots impact. Each member brings unique strengths to lead various wings and initiatives of the organization.
-                
-                <br/><br/><b><u>Executive Committee:</u></b><br/>
-                <br/><br/><b>Muneer Jabbar – President</b><br/>
-                Provides overall leadership and direction to the organization, ensuring alignment with its core values and long-term goals.
-
-                <br/><br/><b>Mohammad Babu – Secretary</b><br/>
-                Oversees day-to-day administrative affairs and ensures effective coordination across departments and programs.
-
-                <br/><br/><b>Rafeek K.B. – Organization Secretary</b><br/>
-                Leads internal organizational development and structure, ensuring smooth functioning across all units.
-
-                <br/><br/><b>Moosa – Treasurer</b><br/>
-                Manages financial planning, budgeting, and transparency in all monetary matters.
-
-                <br/><br/><b> <u>Convenors:</u></b></b><br/>
-                <br/><b>Riyas – QHLS Convenor</b><br/>
-                Heads the Qur’an & Hadith Learning Series, focusing on scriptural literacy and scholarly engagement.
-
-                <br/><br/><b>Moosa – Eelaaf Convenor</b><br/>
-                Leads Eelaaf, ISM’s volunteer wing engaged in dawah, social outreach, and charitable initiatives, fostering community welfare and active civic participation.
-
-                <br/><br/><b>Unais M.A. – Velicham Convenor</b><br/>
-                Leads Velicham, ISM’s grassroots Qur’an learning initiative inspired by the prophetic saying, “The best among you are those who learn the Qur’an and teach it.” The project aims to make Qur’anic learning accessible and widespread across all sections of society, regardless of caste or religion. 
-
-                <br/><br/><b>Fadil Mohammad – IT Convenor</b><br/>
-                Oversees digital infrastructure, tech-based outreach, and innovation in organizational communication.
-
-                <br/><br/><b>Hashim Rishad – Inspire Convenor</b><br/>
-                Leads Inspire, the professional wing of ISM, working to engage Muslim professionals in value-based leadership and service.
-
-                <br/><br/><b>Ameer M.N. – Dawah Convenor</b><br/>
-                Heads dawah initiatives, focusing on Islamic outreach, interfaith understanding, and community education.
-            </p>
-            <!--<a href="about.html">
-              Read More
-            </a> -->
-          </div>
-        </div>
-        <div class="col-lg-7 col-md-6">
-          <div class="img-box">
-            <img src="images/about-img.jpg" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end Leadership section -->
+</header>
 
 
 
-  <!-- service section -->
-
-  <section class="service_section layout_padding">
-    <div class="container ">
-      <div class="heading_container heading_center">
-        <h2> Our Programs </h2>
-      </div>
-      <div class="row">
-        <div class="col-sm-6 col-md-4 mx-auto">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/discussion.png" alt="" />
-            </div>
-            <div class="detail-box">
-              <h5>
-                Isthiqama
-              </h5>
-              <p>
-                Isthiqama is bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla 
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 mx-auto">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/work-team.png" alt="" />
-            </div>
-            <div class="detail-box">
-              <h5>
-                QHLS
-              </h5>
-              <p>
-                QHLS is bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla 
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 mx-auto">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/progress.png" alt="" />
-            </div>
-            <div class="detail-box">
-              <h5>
-                Velicham
-              </h5>
-              <p>
-                Velicham is bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla 
-                <br />&nbsp;
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 mx-auto">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/progress.png" alt="" />
-            </div>
-            <div class="detail-box">
-              <h5>
-                Inspire
-              </h5>
-              <p>
-                Inspire is bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla 
-                <br />&nbsp;
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 mx-auto">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/progress.png" alt="" />
-            </div>
-            <div class="detail-box">
-              <h5>
-                Eelaf & Dawah
-              </h5>
-              <p>
-                Eelaf is bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla 
-                <br />&nbsp;
-              </p>
-            </div>
-          </div>
-        </div>  
-        <div class="col-sm-6 col-md-4 mx-auto">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/progress.png" alt="" />
-            </div>
-            <div class="detail-box">
-              <h5>
-                Falaq
-              </h5>
-              <p>
-                Falaq is bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla  bla bla bla blabla 
-                <br />&nbsp;
-              </p>
-            </div>
-          </div>
-        </div>                        
-      </div>
-    </div>
-  </section>
-
- 
-  <section class="contact_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
-        <h2>Subscribe our Channel - Keep updated</h2>
-      </div>
-      <div class="row">
-        <div class="col-md-12" class="video-container">
-          <iframe width="100%" height="600" frameborder="0"
-                  src="https://www.youtube.com/@ISMINSPIRE">
-          </iframe>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- end contact section -->
-
-  <section class="service_section spec layout_padding">
-    <div class="container ">
-      <div class="heading_container heading_center">
-        <h2> Donate us </h2>
-      </div>
-      <div class="row">
-        <div class="col-sm-6 col-md-6 mx-auto">
-          <div class="box ">
-            <div class="img-box new">
-              <img src="images/qr.jpg" alt="" />
-            </div>
-            <div class="detail-box">
-              <p>
-                You can also be one of us and be part of this program  by donation
-              </p>
-              <div class="copy-btn" onclick="navigator.clipboard.writeText('hashimrishad@okicici');"><i class="fa fa-files-o" aria-hidden="true"></i></div>
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
 
 
-  <!-- info section -->
-  <section class="info_section ">
-    <div class="container">
-      <h4>
-        Get In Touch
-      </h4>
-      <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <div class="info_items">
-            <div class="row">
-              <div class="col-md-4">
-                <a target="_blank"
-                        href="https://www.google.com/maps/place/Salafi+Masjid+%26+Madrasa/@10.0190728,76.3528716,15z/data=!4m2!3m1!1s0x0:0x596013350dfd5842?sa=X&ved=2ahUKEwi23cXm5tKDAxUbcmwGHfFtDJMQ_BJ6BAhQEAA">
-                  <div class="item ">
-                    <div class="img-box ">
-                      <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    </div>
-                    <p>
-                      ISM Kakkanad Zone
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-4">
-                <a href="tel:80891 00778">
-                  <div class="item ">
-                    <div class="img-box ">
-                      <i class="fa fa-phone" aria-hidden="true"></i>
-                    </div>
-                    <p>
-                      +91 80891 00778
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-4">
-                <a href="mailto:inspire.kakkanad@gmail.com">
-                  <div class="item ">
-                    <div class="img-box">
-                      <i class="fa fa-envelope" aria-hidden="true"></i>
-                    </div>
-                    <p>
-                      inspire.kakkanad@gmail.com
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="social-box">
-      <h4>
-        Follow Us
-      </h4>
-      <div class="box">
-        <a href="https://www.facebook.com/p/Inspire-ISM-Kakkanad-100069779871638" target="_blank">
-          <i class="fa fa-facebook" aria-hidden="true"></i>
+  <!-- Hero Section -->
+  <section id="hero" class="relative bg-gradient-to-br from-purple-900 via-pink-900 to-red-900 text-white min-h-screen flex items-center justify-center px-6 scroll-mt-20">
+    <!-- Background Glow/Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-br from-purple-900 via-pink-900 to-red-900 opacity-40 z-0"></div>
+
+    <!-- Hero Content -->
+    <div class="z-10 max-w-4xl text-center">
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+        ISM Kakkanad Zone
+      </h1>
+      <p class="text-lg md:text-xl text-gray-300 mb-8">
+        A movement rooted in values, knowledge, and action.  
+        Empowering youth and communities through purpose-driven programs and grassroots leadership.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#about" class="bg-white text-gray-900 px-6 py-3 rounded-full text-sm font-semibold shadow hover:bg-gray-200 transition">
+          Learn More
         </a>
-        <a href="https://www.youtube.com/@ISMINSPIRE" target="_blank">
-          <i class="fa fa-youtube" aria-hidden="true"></i>
+        <a href="#programs" class="border border-white text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-white hover:text-gray-900 transition">
+          Explore Programs
         </a>
-        <a href="https://chat.whatsapp.com/CCIESkhWRPH9Z3rBAY43jY" target="_blank">
-          <i class="fa fa-whatsapp" aria-hidden="true"></i>
+      </div>
+
+      <!-- Scroll Down Indicator -->
+      <div class="mt-16 flex justify-center">
+        <a href="#about" class="animate-bounce text-white text-2xl hover:text-gray-400 transition">
+          ↓
         </a>
       </div>
     </div>
   </section>
 
+  <!-- Placeholder Sections -->
 
+  <section id="programs" class="min-h-screen py-20 px-6 scroll-mt-20">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Our Programs</h2>
+      <!-- Swiper -->
+      <div class="swiper programs-swiper">
+        <div class="swiper-wrapper">
+          <!-- From Uiverse.io adapted for program section -->
+          <div class="program_card_container">
+            
+            <div class="program_card">
+              <img src="images\isthiqaama.jpg" alt="Logo" class="program_card__image" />
+              <div class="program_card__content">
+                <p class="program_card__title">Isthiqama</p>
+                <p class="program_card__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                </p>
+              </div>
+            </div>
+            
+            
+            <div class="program_card">
+              <img src="images\velicham1.jpg" alt="Logo" class="program_card__image" />
+              <div class="program_card__content">
+                <p class="program_card__title">Velicham</p>
+                <p class="program_card__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                </p>
+              </div>
+            </div>
+            
+            
+            <div class="program_card">
+              <img src="images\QHLS_logo2.jpeg" alt="Logo" class="program_card__image" />
+              <div class="program_card__content">
+                <p class="program_card__title">QHLS</p>
+                <p class="program_card__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                </p>
+              </div>
+            </div>
+            
+            
+            
+            <div class="program_card">
+              <img src="images\Inspire_logo.jpg" alt="Logo" class="program_card__image" />
+              <div class="program_card__content">
+                <p class="program_card__title">Inspire</p>
+                <p class="program_card__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                </p>
+              </div>
+            </div>
+            
+            
+                        
+            <div class="program_card">
+              <img src="images\eelaf.jpg" alt="Logo" class="program_card__image" />
+              <div class="program_card__content">
+                <p class="program_card__title">Eelaf</p>
+                <p class="program_card__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                </p>
+              </div>
+            </div>
 
-  <!-- end info_section -->
+            <div class="program_card">
+              <img src="images\professional-img.jpg" alt="Logo" class="program_card__image" />
+              <div class="program_card__content">
+                <p class="program_card__title">Ahammed Anas Mowlavi</p>
+                <p class="program_card__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                </p>
+              </div>
+            </div>
+          </div>
 
-  <!-- footer section -->
-  <footer class="footer_section">
-    <div class="container">
-      <p>
-        &copy; <span id="displayDateYear"></span> All Rights Reserved By
-        <a href="">ISM Team Inspire <i><br />( Professional wing of ISM)</i></a>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="leadership" class="min-h-screen py-20 px-6 scroll-mt-20">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Leadership</h2>
+      <p>Our leadership team comprises dedicated individuals committed to upholding the vision and mission of ISM through strategic guidance, organizational excellence, and grassroots impact. Each member brings unique strengths to lead various wings and initiatives of the organization.</p>
+      <br>
+        
+                        <h2 class="text-2xl font-semibold mt-8 mb-4">Executive Committee</h2><br><br>
+            <div class="d-flex flex -row justify-content-center">
+
+                <!--Muneer Jabbar – President-->                            
+                <div class="cardContainer m-auto">
+                    <div class="profileDiv">
+                      <img src="images\muneer_jabbar.jpg" alt="Muneer Jabbar" class="profileImage" />
+                    </div>
+
+                    <div class="infoDiv">
+                        <div class="nameDiv">
+                            <p class="name">Muneer Jabbar</p>
+                            <p class="role">President</p>
+                        </div>
+                        <div class="socialDiv">
+                            <a href="#github"><svg viewBox="0 0 496 512" class="socials github"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a>
+                        
+                        
+                            <a href="#linkdin"><svg viewBox="0 0 448 512" class="socials linkdin"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg></a>
+
+                            <a href="#insta"><svg class="socials instagram" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a>
+                        
+                        </div>
+                    </div>
+                </div>
+                                            
+                <!--Mohammad Babu – Secretary-->  
+                <div class="cardContainer m-auto">                          
+                    <div class="profileDiv">
+                      <img src="images\babu.jpg" alt="Mohammad Babu" class="profileImage" />
+                    </div>
+                    <div class="infoDiv">
+                        <div class="nameDiv">
+                            <p class="name">Mohammad Babu</p>
+                            <p class="role">Secretary</p>
+                        </div>
+                        <div class="socialDiv">
+                            <a href="#github"><svg viewBox="0 0 496 512" class="socials github"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a>
+                        
+                        
+                            <a href="#linkdin"><svg viewBox="0 0 448 512" class="socials linkdin"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg></a>
+
+                            <a href="#insta"><svg class="socials instagram" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a>
+                        
+                        </div>
+                    </div>
+                </div>
+
+                <!--Rafeek K.B. – Organization Secretary-->                            
+                <div class="cardContainer m-auto">
+                    <div class="profileDiv">
+                      <img src="images\rafeeq.jpg" alt="Rafeek K.B" class="profileImage" />
+                    </div>
+                    <div class="infoDiv">
+                        <div class="nameDiv">
+                            <p class="name">Rafeek K.B.</p>
+                            <p class="role">Organization Secretary</p>
+                        </div>
+                        <div class="socialDiv">
+                            <a href="#github"><svg viewBox="0 0 496 512" class="socials github"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a>
+                        
+                        
+                            <a href="#linkdin"><svg viewBox="0 0 448 512" class="socials linkdin"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg></a>
+
+                            <a href="#insta"><svg class="socials instagram" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a>
+                        
+                        </div>
+                    </div>
+                </div>
+
+                <!--Moosa – Treasurer-->                            
+                <div class="cardContainer m-auto">
+                    <div class="profileDiv">
+                      <img src="images\moosa.jpg" alt="Moosa" class="profileImage" />
+                    </div>
+                    <div class="infoDiv">
+                        <div class="nameDiv">
+                            <p class="name">Moosa</p>
+                            <p class="role">Treasurer</p>
+                        </div>
+                        <div class="socialDiv">
+                            <a href="#github"><svg viewBox="0 0 496 512" class="socials github"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a>
+                        
+                        
+                            <a href="#linkdin"><svg viewBox="0 0 448 512" class="socials linkdin"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg></a>
+
+                            <a href="#insta"><svg class="socials instagram" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a>
+                        
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+                  
+
+      <h3 class="text-2xl font-semibold mt-8 mb-4">Convenors:</h3>
+      <ul class="text-left list-disc list-inside max-w-xl mx-auto">
+        <li><strong>Riyas – QHLS Convenor</strong><br/>Heads the Qur’an & Hadith Learning Series, focusing on scriptural literacy and scholarly engagement.</li>
+        <li><strong>Moosa – Eelaaf Convenor</strong><br/>Leads Eelaaf, ISM’s volunteer wing engaged in dawah, social outreach, and charitable initiatives, fostering community welfare and active civic participation.</li>
+        <li><strong>Unais M.A. – Velicham Convenor</strong><br/>Leads Velicham, ISM’s grassroots Qur’an learning initiative inspired by the prophetic saying, “The best among you are those who learn the Qur’an and teach it.” The project aims to make Qur’anic learning accessible and widespread across all sections of society, regardless of caste or religion.</li>
+        <li><strong>Fadil Mohammad – IT Convenor</strong><br/>Oversees digital infrastructure, tech-based outreach, and innovation in organizational communication.</li>
+        <li><strong>Hashim Rishad – Inspire Convenor</strong><br/>Leads Inspire, the professional wing of ISM, working to engage Muslim professionals in value-based leadership and service.</li>
+        <li><strong>Ameer M.N. – Dawah Convenor</strong><br/>Heads dawah initiatives, focusing on Islamic outreach, interfaith understanding, and community education.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="units" class="min-h-screen py-20 px-6 scroll-mt-20">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Units</h2>
+      <p>Units information and details will be added here.</p>
+    </div>
+  </section>
+
+  <section id="about" class="min-h-screen py-20 px-6 scroll-mt-20">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">About</h2>
+      <p>Ithihadu Shubbanil Mujaahideen (ISM) is the youth wing of Kerala Nadvathul Mujahideen (KNM), a reformist Islamic movement based in Kerala, India. Founded in the early 20th century, ISM aims to cultivate a morally upright, intellectually enlightened, and socially responsible generation of Muslim youth grounded in authentic Islamic teachings.</p>
+    <br>
+      <p>ISM emphasizes Qur'an and Sunnah-based reform, rejecting superstition, innovations (bid‘ah), and un-Islamic cultural practices. It works through grassroots initiatives in education, dawah, literature, social service, and community development. With a motto of "Service to Humanity is Worship of Allah," ISM encourages youth to be proactive in social change while maintaining a deep spiritual and ethical foundation.</p>
+    <br>
+      <p>The organization has significantly contributed to religious awareness, youth empowerment, and intellectual revival among Kerala’s Muslims. It runs various wings and projects, including programs for students, professionals, and families, ensuring Islam remains a lived and practical guide for modern life.</p>
+    <br>
+      <p>Kerala Nadvathul Mujahideen (https://knm.org.in/) is a socio- religious organisation established in 1950 with K M Moulavi as founder president and N V Abdussalam moulavi as founder genaral Secretary.It is registered under societies registration act XXI of 1860 with No. 2/57. The organisation aims at the development and reformist activities of the society with focus on the upliftment of weaker sections of the society.</p>
+    <br>
+      <p>The parent organization of KNM is Kerala Jamiyyathul Ulama, the first recognized forum of Muslim scholars in Kerala. KNM shares a close ideological affiliation with the All-India Jamaat-e-Ahl-i Hadith, a national-level movement committed to the same foundational principles of Tawheed (monotheism), adherence to authentic Hadith, and revival of Islamic values across India.</p>
+    </div>
+  </section>
+
+  <section id="events" class="min-h-screen py-20 px-6 scroll-mt-20">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Events</h2>
+      <!-- Swiper -->
+      <div class="swiper events-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/upcomingevent/upcomingevent1.jpeg" alt="Event 1" class="mx-auto rounded-lg shadow-lg" /></div>
+          <div class="swiper-slide"><img src="images/upcomingevent/upcomingevent2.jpeg" alt="Event 2" class="mx-auto rounded-lg shadow-lg" /></div>
+          <div class="swiper-slide"><img src="images/upcomingevent/upcomingevent3.jpeg" alt="Event 3" class="mx-auto rounded-lg shadow-lg" /></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="min-h-screen py-20 px-6 scroll-mt-20">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Gallery</h2>
+      <!-- Swiper -->
+      <div class="swiper gallery-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/gallery1.jpg" alt="Gallery 1" class="mx-auto rounded-lg shadow-lg" /></div>
+          <div class="swiper-slide"><img src="images/gallery2.jpg" alt="Gallery 2" class="mx-auto rounded-lg shadow-lg" /></div>
+          <div class="swiper-slide"><img src="images/gallery3.jpg" alt="Gallery 3" class="mx-auto rounded-lg shadow-lg" /></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="min-h-screen py-20 px-6 scroll-mt-20">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Contact</h2>
+      <p>Contact information and form will be added here.</p>
+    </div>
+  </section>
+
+  <footer class="bg-blue-800 text-white py-6 mt-12">
+    <div class="max-w-4xl mx-auto text-center">
+      <p>&copy; 2024 ISM Kakkanad Zone. All rights reserved.</p>
+      <p>Follow us on 
+        <a href="#" class="text-amber-400 hover:underline">Facebook</a>, 
+        <a href="#" class="text-amber-400 hover:underline">Twitter</a>, 
+        <a href="#" class="text-amber-400 hover:underline">Instagram</a>
       </p>
     </div>
   </footer>
 
-  <!-- footer section -->
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+    const programsSwiper = new Swiper('.programs-swiper', {
+      loop: true,
+      pagination: {
+        el: '.programs-swiper .swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.programs-swiper .swiper-button-next',
+        prevEl: '.programs-swiper .swiper-button-prev',
+      },
+      slidesPerView: 1,
+      spaceBetween: 20,
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
 
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    const eventsSwiper = new Swiper('.events-swiper', {
+      loop: true,
+      pagination: {
+        el: '.events-swiper .swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.events-swiper .swiper-button-next',
+        prevEl: '.events-swiper .swiper-button-prev',
+      },
+      slidesPerView: 1,
+      spaceBetween: 20,
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+
+    const gallerySwiper = new Swiper('.gallery-swiper', {
+      loop: true,
+      pagination: {
+        el: '.gallery-swiper .swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.gallery-swiper .swiper-button-next',
+        prevEl: '.gallery-swiper .swiper-button-prev',
+      },
+      slidesPerView: 1,
+      spaceBetween: 20,
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+
+    // JavaScript to toggle navigation menu on small screens
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
   </script>
-  <script src="js/custom.js"></script>
-  <!-- Google Map -->
-  <!-- End Google Map -->
-
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
 </body>
-
 </html>
