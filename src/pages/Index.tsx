@@ -1,4 +1,6 @@
 
+import { ThemeProvider } from "@/hooks/useTheme";
+import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Pillars from "@/components/Pillars";
@@ -10,16 +12,19 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <Hero />
-      <About />
-      <Pillars />
-      <Events />
-      <Impact />
-      <Testimonials />
-      <GetInvolved />
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen bg-white dark:bg-slate-900 transition-colors duration-300">
+        <Navbar />
+        <Hero />
+        <About />
+        <Pillars />
+        <Events />
+        <Impact />
+        <Testimonials />
+        <GetInvolved />
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 };
 

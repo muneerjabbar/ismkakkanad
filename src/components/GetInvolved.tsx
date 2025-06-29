@@ -20,83 +20,67 @@ const GetInvolved = () => {
     {
       icon: Heart,
       title: "Volunteer with Us",
-      description: "Help with events, campaigns, and mentoring programs.",
+      description: "Help with events, campaigns, mentoring.",
       action: "Volunteer"
     },
     {
       icon: Bell,
       title: "Follow Us",
       description: "Stay updated via social media and newsletters.",
-      action: "Subscribe"
+      action: "Follow"
     }
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+    <section id="contact" className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-slate-900 transition-colors duration-300">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-800 dark:text-white mb-4 sm:mb-6">
             Get Involved
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-emerald-600 to-teal-600 mx-auto mb-8"></div>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Join our mission to empower young Muslims through faith, education, and community service
+          <div className="w-24 h-1 bg-gradient-to-r from-emerald-600 to-teal-600 mx-auto mb-6 sm:mb-8"></div>
+          <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto px-4">
+            Join our growing community and make a difference
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {ways.map((way, index) => (
             <div key={index} className="text-center group">
-              <div className="bg-emerald-50 rounded-2xl p-8 hover:bg-emerald-100 transition-colors duration-300">
-                <div className="w-16 h-16 bg-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <way.icon className="w-8 h-8 text-white" />
+              <div className="bg-emerald-50 dark:bg-slate-800 rounded-2xl p-6 sm:p-8 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <way.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-slate-800 mb-4">
+                <h3 className="text-lg sm:text-xl font-semibold text-slate-800 dark:text-white mb-3 sm:mb-4">
                   {way.title}
                 </h3>
-                <p className="text-slate-600 mb-6 leading-relaxed">
+                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-4 sm:mb-6">
                   {way.description}
                 </p>
-                <Button className="bg-emerald-600 hover:bg-emerald-700 text-white">
+                <Button className="bg-emerald-600 hover:bg-emerald-700 text-white w-full sm:w-auto">
                   {way.action}
                 </Button>
               </div>
             </div>
           ))}
         </div>
-        
-        {/* Contact Information */}
-        <div className="bg-slate-50 rounded-2xl p-8 max-w-4xl mx-auto">
-          <h3 className="text-2xl font-semibold text-slate-800 mb-8 text-center">
+
+        <div className="bg-emerald-50 dark:bg-slate-800 rounded-2xl p-6 sm:p-8 max-w-2xl mx-auto">
+          <h3 className="text-xl sm:text-2xl font-bold text-slate-800 dark:text-white mb-4 sm:mb-6 text-center">
             Connect with Us
           </h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="flex items-center">
-              <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mr-4">
-                <MapPin className="w-6 h-6 text-emerald-600" />
-              </div>
-              <div>
-                <div className="font-semibold text-slate-800">ISM Kakkānād Center</div>
-                <div className="text-slate-600">Thrissur District, Kerala</div>
-              </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center">
+            <div className="flex flex-col items-center">
+              <MapPin className="w-6 h-6 text-emerald-600 dark:text-emerald-400 mb-2" />
+              <span className="text-sm sm:text-base text-slate-600 dark:text-slate-300">ISM Kakkānād Center</span>
             </div>
-            <div className="flex items-center">
-              <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mr-4">
-                <Mail className="w-6 h-6 text-emerald-600" />
-              </div>
-              <div>
-                <div className="font-semibold text-slate-800">Email Us</div>
-                <div className="text-slate-600">info@ismkakkanad.org</div>
-              </div>
+            <div className="flex flex-col items-center">
+              <Mail className="w-6 h-6 text-emerald-600 dark:text-emerald-400 mb-2" />
+              <span className="text-sm sm:text-base text-slate-600 dark:text-slate-300">info@ismkakkanad.org</span>
             </div>
-            <div className="flex items-center">
-              <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mr-4">
-                <Phone className="w-6 h-6 text-emerald-600" />
-              </div>
-              <div>
-                <div className="font-semibold text-slate-800">Call Us</div>
-                <div className="text-slate-600">+91-XXXXX-XXXXX</div>
-              </div>
+            <div className="flex flex-col items-center">
+              <Phone className="w-6 h-6 text-emerald-600 dark:text-emerald-400 mb-2" />
+              <span className="text-sm sm:text-base text-slate-600 dark:text-slate-300">+91-XXXXX-XXXXX</span>
             </div>
           </div>
         </div>
