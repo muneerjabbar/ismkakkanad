@@ -1,8 +1,15 @@
 
-import { TrendingUp, Users, Award, Calendar } from "lucide-react";
+import { TrendingUp, Users, Award, Calendar, LucideIcon } from "lucide-react";
+
+interface Stat {
+  icon: LucideIcon;
+  number: string;
+  label: string;
+  description: string;
+}
 
 const Impact = () => {
-  const stats = [
+  const stats: Stat[] = [
     {
       icon: Calendar,
       number: "45+",

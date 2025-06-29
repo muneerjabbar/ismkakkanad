@@ -2,8 +2,16 @@
 import { Calendar, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+interface Event {
+  title: string;
+  date: string;
+  time: string;
+  location: string;
+  description: string;
+}
+
 const Events = () => {
-  const events = [
+  const events: Event[] = [
     {
       title: "Youth Seminar: Living Islam in Modern India",
       date: "July 15, 2025",

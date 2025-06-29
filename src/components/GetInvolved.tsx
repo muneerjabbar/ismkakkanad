@@ -1,9 +1,16 @@
 
 import { Button } from "@/components/ui/button";
-import { UserPlus, Heart, Bell, MapPin, Mail, Phone } from "lucide-react";
+import { UserPlus, Heart, Bell, MapPin, Mail, Phone, LucideIcon } from "lucide-react";
+
+interface InvolvementWay {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  action: string;
+}
 
 const GetInvolved = () => {
-  const ways = [
+  const ways: InvolvementWay[] = [
     {
       icon: UserPlus,
       title: "Become a Member",

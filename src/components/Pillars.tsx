@@ -1,8 +1,15 @@
 
-import { Book, Heart, TrendingUp, Palette } from "lucide-react";
+import { Book, Heart, TrendingUp, Palette, LucideIcon } from "lucide-react";
+
+interface Pillar {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  color: string;
+}
 
 const Pillars = () => {
-  const pillars = [
+  const pillars: Pillar[] = [
     {
       icon: Book,
       title: "Faith & Learning",

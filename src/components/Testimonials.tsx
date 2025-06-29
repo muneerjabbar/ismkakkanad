@@ -1,8 +1,15 @@
 
 import { Quote } from "lucide-react";
 
+interface Testimonial {
+  quote: string;
+  name: string;
+  role: string;
+  avatar: string;
+}
+
 const Testimonials = () => {
-  const testimonials = [
+  const testimonials: Testimonial[] = [
     {
       quote: "Joining ISM gave me the confidence to lead weekly Qur'ān discussions and serve my community.",
       name: "Amini",
