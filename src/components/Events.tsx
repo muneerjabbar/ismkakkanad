@@ -1,6 +1,6 @@
-
 import { Calendar, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 interface Event {
   title: string;
@@ -8,53 +8,66 @@ interface Event {
   location: string;
   description: string;
   logo: string;
+  slug: string;
 }
 
 const Events = () => {
+  const navigate = useNavigate();
+
   const events: Event[] = [
     {
       title: "Isthiqaama",
       date: "Monthly",
       location: "Multiple Venues",
       description: "Weekly spiritual gathering focused on steadfastness in faith and community bonding.",
-      logo: "/lovable-uploads/a7868831-0cd8-4bae-9d3f-4453db5c449a.png"
+      logo: "/lovable-uploads/a7868831-0cd8-4bae-9d3f-4453db5c449a.png",
+      slug: "isthiqaama"
     },
     {
       title: "ISM Velicham",
       date: "Twice in a year",
       location: "Dedicated exam centers",
       description: "Grassroots Qur'an learning initiative making Qur'anic education accessible to all.",
-      logo: "/lovable-uploads/f433d109-7df2-4cdd-80d3-333c7c7bd5c2.png"
+      logo: "/lovable-uploads/f433d109-7df2-4cdd-80d3-333c7c7bd5c2.png",
+      slug: "velicham"
     },
     {
       title: "QHLS",
       date: "Weekly",
       location: "Multiple Venues",
       description: "Qur'an & Hadith Learning Series focusing on scriptural literacy and scholarly engagement.",
-      logo: "/lovable-uploads/b4bade68-c4e0-4613-bece-42e21c301817.png"
+      logo: "/lovable-uploads/b4bade68-c4e0-4613-bece-42e21c301817.png",
+      slug: "qhls"
     },
     {
       title: "ISM Inspire",
       date: "IT professionals",
       location: "Multiple Venues",
       description: "Professional wing engaging Muslim professionals in value-based leadership and service.",
-      logo: "/lovable-uploads/c759151f-3f03-42cc-bf0b-2aabc2e64018.png"
+      logo: "/lovable-uploads/c759151f-3f03-42cc-bf0b-2aabc2e64018.png",
+      slug: "inspire"
     },
     {
       title: "Eelaf",
       date: "Social service, volunteering",
       location: "Community Centers",
       description: "Volunteer wing engaged in dawah, social outreach, and charitable initiatives.",
-      logo: "/lovable-uploads/886f0498-67b8-4eda-b429-ffc24f779f8c.png"
+      logo: "/lovable-uploads/886f0498-67b8-4eda-b429-ffc24f779f8c.png",
+      slug: "eelaf"
     },
     {
       title: "Other Programs",
       date: "Various",
       location: "Multiple Venues",
       description: "Special seminars, workshops, retreats, and community service programs throughout the year.",
-      logo: "🌟"
+      logo: "🌟",
+      slug: "other"
     }
   ];
+
+  const handleLearnMore = (slug: string) => {
+    navigate(`/programs/${slug}`);
+  };
 
   return (
     <section id="events" className="py-12 sm:py-16 lg:py-20 bg-slate-50 dark:bg-slate-800 transition-colors duration-300">
@@ -106,7 +119,10 @@ const Events = () => {
                 {event.description}
               </p>
               
-              <Button className="bg-emerald-600 hover:bg-emerald-700 text-white w-full sm:w-auto">
+              <Button 
+                onClick={() => handleLearnMore(event.slug)}
+                className="bg-emerald-600 hover:bg-emerald-700 text-white w-full sm:w-auto"
+              >
                 Learn More
               </Button>
             </div>

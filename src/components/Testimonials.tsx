@@ -1,5 +1,12 @@
 
 import { Quote } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 interface Testimonial {
   quote: string;
@@ -11,9 +18,9 @@ interface Testimonial {
 const Testimonials = () => {
   const testimonials: Testimonial[] = [
     {
-      quote: "Joining ISM gave me the confidence to lead weekly Qur'ān discussions and serve my community.",
+      quote: "Joining ISM gave me the confidence to lead weekly Qur'an discussions and serve my community.",
       name: "Amini",
-      role: "ISM Kakkānād member",
+      role: "ISM Kakkanad member",
       avatar: "/lovable-uploads/4421a3cc-b139-498f-9ee8-619c0b9c8617.png"
     },
     {
@@ -21,11 +28,35 @@ const Testimonials = () => {
       name: "Rasheed",
       role: "B‑tech student",
       avatar: "/lovable-uploads/e3a4b957-aea0-4c38-a960-e1bed40295b7.png"
+    },
+    {
+      quote: "Through ISM's programs, I learned to balance my professional life with Islamic values and community service.",
+      name: "Farid Ahmed",
+      role: "Software Engineer",
+      avatar: "/lovable-uploads/4421a3cc-b139-498f-9ee8-619c0b9c8617.png"
+    },
+    {
+      quote: "The leadership training at ISM helped me become a better person and a more effective community volunteer.",
+      name: "Zara Malik",
+      role: "Medical Student",
+      avatar: "/lovable-uploads/e3a4b957-aea0-4c38-a960-e1bed40295b7.png"
+    },
+    {
+      quote: "ISM's Velicham program transformed my understanding of the Qur'an and deepened my faith significantly.",
+      name: "Omar Siddique",
+      role: "Teacher",
+      avatar: "/lovable-uploads/4421a3cc-b139-498f-9ee8-619c0b9c8617.png"
+    },
+    {
+      quote: "Being part of Eelaf taught me that serving others is the highest form of worship and brought meaning to my life.",
+      name: "Aysha Rahman",
+      role: "Social Worker",
+      avatar: "/lovable-uploads/e3a4b957-aea0-4c38-a960-e1bed40295b7.png"
     }
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-emerald-50 dark:bg-slate-800 transition-colors duration-300">
+    <section id="testimonials" className="py-12 sm:py-16 lg:py-20 bg-emerald-50 dark:bg-slate-800 transition-colors duration-300">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-800 dark:text-white mb-4 sm:mb-6">
@@ -37,31 +68,45 @@ const Testimonials = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white dark:bg-slate-700 rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center mb-4 sm:mb-6">
-                <Quote className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-600 dark:text-emerald-400 mr-4" />
-                <div className="w-12 h-1 bg-emerald-600 dark:bg-emerald-400"></div>
-              </div>
-              
-              <blockquote className="text-base sm:text-lg text-slate-700 dark:text-slate-200 leading-relaxed mb-4 sm:mb-6 italic">
-                "{testimonial.quote}"
-              </blockquote>
-              
-              <div className="flex items-center">
-                <img 
-                  src={testimonial.avatar} 
-                  alt={testimonial.name}
-                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover mr-4"
-                />
-                <div>
-                  <div className="font-semibold text-slate-800 dark:text-white text-sm sm:text-base">{testimonial.name}</div>
-                  <div className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm">{testimonial.role}</div>
-                </div>
-              </div>
-            </div>
-          ))}
+        <div className="max-w-6xl mx-auto">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <div className="bg-white dark:bg-slate-700 rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+                    <div className="flex items-center mb-4 sm:mb-6">
+                      <Quote className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-600 dark:text-emerald-400 mr-4" />
+                      <div className="w-12 h-1 bg-emerald-600 dark:bg-emerald-400"></div>
+                    </div>
+                    
+                    <blockquote className="text-base sm:text-lg text-slate-700 dark:text-slate-200 leading-relaxed mb-4 sm:mb-6 italic">
+                      "{testimonial.quote}"
+                    </blockquote>
+                    
+                    <div className="flex items-center">
+                      <img 
+                        src={testimonial.avatar} 
+                        alt={testimonial.name}
+                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover mr-4"
+                      />
+                      <div>
+                        <div className="font-semibold text-slate-800 dark:text-white text-sm sm:text-base">{testimonial.name}</div>
+                        <div className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm">{testimonial.role}</div>
+                      </div>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
         </div>
       </div>
     </section>
