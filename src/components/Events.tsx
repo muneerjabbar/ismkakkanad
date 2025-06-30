@@ -1,11 +1,10 @@
 
-import { Calendar, MapPin, Clock } from "lucide-react";
+import { Calendar, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface Event {
   title: string;
   date: string;
-  time: string;
   location: string;
   description: string;
   logo: string;
@@ -15,48 +14,42 @@ const Events = () => {
   const events: Event[] = [
     {
       title: "Isthiqaama",
-      date: "Every Friday",
-      time: "7:30 PM - 9:00 PM",
-      location: "ISM Kakkānād Center",
+      date: "Monthly",
+      location: "Multiple Venues",
       description: "Weekly spiritual gathering focused on steadfastness in faith and community bonding.",
-      logo: "🕌"
+      logo: "/lovable-uploads/a7868831-0cd8-4bae-9d3f-4453db5c449a.png"
     },
     {
       title: "ISM Velicham",
-      date: "Saturdays",
-      time: "9:00 AM - 11:00 AM",
-      location: "Various Locations",
+      date: "Twice in a year",
+      location: "Dedicated exam centers",
       description: "Grassroots Qur'an learning initiative making Qur'anic education accessible to all.",
-      logo: "📖"
+      logo: "/lovable-uploads/f433d109-7df2-4cdd-80d3-333c7c7bd5c2.png"
     },
     {
       title: "QHLS",
-      date: "Monthly",
-      time: "10:00 AM - 4:00 PM",
-      location: "ISM Center",
+      date: "Weekly",
+      location: "Multiple Venues",
       description: "Qur'an & Hadith Learning Series focusing on scriptural literacy and scholarly engagement.",
-      logo: "📚"
+      logo: "/lovable-uploads/b4bade68-c4e0-4613-bece-42e21c301817.png"
     },
     {
       title: "ISM Inspire",
-      date: "Quarterly",
-      time: "6:00 PM - 8:00 PM",
-      location: "Professional Centers",
+      date: "IT professionals",
+      location: "Multiple Venues",
       description: "Professional wing engaging Muslim professionals in value-based leadership and service.",
-      logo: "💼"
+      logo: "/lovable-uploads/c759151f-3f03-42cc-bf0b-2aabc2e64018.png"
     },
     {
       title: "Eelaf",
-      date: "Ongoing",
-      time: "Flexible",
+      date: "Social service, volunteering",
       location: "Community Centers",
       description: "Volunteer wing engaged in dawah, social outreach, and charitable initiatives.",
-      logo: "🤝"
+      logo: "/lovable-uploads/886f0498-67b8-4eda-b429-ffc24f779f8c.png"
     },
     {
       title: "Other Programs",
       date: "Various",
-      time: "Multiple Slots",
       location: "Multiple Venues",
       description: "Special seminars, workshops, retreats, and community service programs throughout the year.",
       logo: "🌟"
@@ -80,8 +73,16 @@ const Events = () => {
           {events.map((event, index) => (
             <div key={index} className="bg-white dark:bg-slate-700 rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="flex items-center mb-4 sm:mb-6">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mr-4 text-2xl">
-                  {event.logo}
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white dark:bg-slate-600 rounded-2xl flex items-center justify-center mr-4 overflow-hidden border border-slate-200 dark:border-slate-600">
+                  {event.logo.startsWith('/') ? (
+                    <img 
+                      src={event.logo} 
+                      alt={event.title}
+                      className="w-full h-full object-contain p-1"
+                    />
+                  ) : (
+                    <span className="text-2xl">{event.logo}</span>
+                  )}
                 </div>
                 <div>
                   <h3 className="text-lg sm:text-xl font-semibold text-slate-800 dark:text-white mb-1">
@@ -94,10 +95,6 @@ const Events = () => {
                 <div className="flex items-center text-slate-600 dark:text-slate-300">
                   <Calendar className="w-4 h-4 mr-2" />
                   <span className="text-sm sm:text-base">{event.date}</span>
-                </div>
-                <div className="flex items-center text-slate-600 dark:text-slate-300">
-                  <Clock className="w-4 h-4 mr-2" />
-                  <span className="text-sm sm:text-base">{event.time}</span>
                 </div>
                 <div className="flex items-center text-slate-600 dark:text-slate-300">
                   <MapPin className="w-4 h-4 mr-2" />
