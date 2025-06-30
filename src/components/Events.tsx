@@ -1,3 +1,4 @@
+
 import { Calendar, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
@@ -67,6 +68,8 @@ const Events = () => {
 
   const handleLearnMore = (slug: string) => {
     navigate(`/programs/${slug}`);
+    // Scroll to top when navigating to program pages
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
