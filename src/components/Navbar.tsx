@@ -10,12 +10,12 @@ const Navbar = () => {
 
   const navItems = [
     { name: "Home", href: "#home" },
-    { name: "Programs", href: "#programs" },
-    { name: "Leadership", href: "#leadership" },
     { name: "About", href: "#about" },
-    { name: "Events", href: "#events" },
-    { name: "Gallery", href: "#gallery" },
-    { name: "Contact", href: "#contact" },
+    { name: "Programs", href: "#events" },
+    { name: "Leadership", href: "#leadership" },
+    { name: "Impact", href: "#impact" },
+    { name: "Testimonials", href: "#testimonials" },
+    { name: "Get Involved", href: "#get-involved" },
   ];
 
   return (
