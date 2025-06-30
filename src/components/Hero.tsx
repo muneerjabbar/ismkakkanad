@@ -1,10 +1,7 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, ChevronDown } from "lucide-react";
-
 const Hero = () => {
-  return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-800 to-pink-700 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700 text-white overflow-hidden pt-16">
+  return <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-800 to-pink-700 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700 text-white overflow-hidden pt-16">
       {/* Background overlay */}
       <div className="absolute inset-0 bg-black/20"></div>
       
@@ -68,10 +65,8 @@ const Hero = () => {
       
       {/* Scroll indicator - moved to bottom */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <ChevronDown className="w-6 h-6 text-white/70" />
+        <ChevronDown className="w-6 h-6 text-white/70 py-px my-0" />
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
