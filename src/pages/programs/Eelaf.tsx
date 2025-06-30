@@ -1,6 +1,5 @@
-
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Heart, Users, Hands } from "lucide-react";
+import { ArrowLeft, Heart, Users, Hand } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
 
@@ -66,7 +65,7 @@ const Eelaf = () => {
                 <p className="text-slate-600 dark:text-slate-300">Islamic outreach, interfaith dialogue, and educational seminars</p>
               </div>
               <div className="bg-red-50 dark:bg-slate-800 p-6 rounded-lg">
-                <Hands className="w-8 h-8 text-red-600 mb-3" />
+                <Hand className="w-8 h-8 text-red-600 mb-3" />
                 <h3 className="font-semibold text-slate-800 dark:text-white mb-2">Charitable Initiatives</h3>
                 <p className="text-slate-600 dark:text-slate-300">Educational support, skills training, and poverty alleviation programs</p>
               </div>
