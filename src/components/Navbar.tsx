@@ -24,8 +24,12 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">ISM</span>
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center overflow-hidden">
+              <img 
+                src="/lovable-uploads/f977c6cf-2c72-470d-b5c4-a85ce353b9ad.png" 
+                alt="ISM Kakkanad"
+                className="w-full h-full object-contain"
+              />
             </div>
             <span className="font-bold text-xl text-slate-800 dark:text-white">
               ISM KAKKANAD

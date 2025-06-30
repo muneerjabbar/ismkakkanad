@@ -18,22 +18,22 @@ const Leadership = () => {
     {
       name: "Muneer Jabbar",
       position: "President",
-      image: "/lovable-uploads/4421a3cc-b139-498f-9ee8-619c0b9c8617.png"
+      image: "/lovable-uploads/4e9c7c8b-869f-4607-adeb-7ca10af0bb36.png"
     },
     {
       name: "Mohammad Babu",
       position: "Secretary",
-      image: "/lovable-uploads/e3a4b957-aea0-4c38-a960-e1bed40295b7.png"
+      image: "/lovable-uploads/db258868-e21e-4914-b27b-d71071da1832.png"
     },
     {
       name: "Rafeek K.B.",
       position: "Organization Secretary",
-      image: "/lovable-uploads/6c18632e-9182-4cc0-ad91-99517f38543e.png"
+      image: "/lovable-uploads/b6d1d11c-8c38-4e1e-a06c-66f788b9ebcc.png"
     },
     {
       name: "Moosa",
       position: "Treasurer",
-      image: "/lovable-uploads/4421a3cc-b139-498f-9ee8-619c0b9c8617.png"
+      image: "/lovable-uploads/1c622ad5-9914-4ed1-abaa-c1d4dcda6488.png"
     }
   ];
 
