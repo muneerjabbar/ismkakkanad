@@ -48,10 +48,10 @@ const Testimonials = () => {
       avatar: "/lovable-uploads/4421a3cc-b139-498f-9ee8-619c0b9c8617.png"
     },
     {
-      quote: "Being part of Eelaf taught me that serving others is the highest form of worship and brought meaning to my life.",
-      name: "Aysha Rahman",
-      role: "Social Worker",
-      avatar: "/lovable-uploads/e3a4b957-aea0-4c38-a960-e1bed40295b7.png"
+      quote: "ഇന്ന് തീക്ഷണമായ മത വിദ്വേഷം യുക്തിരഹിതമായ പ്രചരണവും ശക്തിയേറിയപ്പോൾ, കാലോചിതമായ ദഅ്'വത്തിലൂടെ യഥാർത്ഥ വിശ്വാസത്തിന്റെയും സത്യത്തിന്റെയും ശബ്ദമായി നിലകൊള്ളുന്നത് വലിയൊരു പ്രവർത്തനമാണ്. അതിനായി കാക്കനാട് ഐ.എസ്.എം. ചെയ്യുന്ന ഓരോ ശ്രമവും അഭിനന്ദനാർഹമാണ്. ഈ ദൗത്യം റബ്ബ് കബൂൽ ചെയ്യട്ടെ.",
+      name: "ഡോ. അബ്ദുൽ ഹമീദ് മദനി",
+      role: "Islamic Scholar",
+      avatar: "/lovable-uploads/4421a3cc-b139-498f-9ee8-619c0b9c8617.png"
     }
   ];
 
