@@ -4,7 +4,8 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: '/ism_kakkanad/', // 👈 Needed for GitHub Pages under a repo folder
+  // Use relative base in production so it works under any GitHub Pages repo name
+  base: mode === 'production' ? './' : '/',
   server: {
     host: "::",
     port: 8080,

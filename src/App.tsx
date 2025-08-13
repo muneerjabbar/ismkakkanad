@@ -20,19 +20,25 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/programs/velicham" element={<Velicham />} />
-          <Route path="/programs/isthiqaama" element={<Isthiqaama />} />
-          <Route path="/programs/qhls" element={<QHLS />} />
-          <Route path="/programs/inspire" element={<Inspire />} />
-          <Route path="/programs/eelaf" element={<Eelaf />} />
-          <Route path="/programs/other" element={<Other />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      {(() => {
+        const resolvedPathname = new URL(import.meta.env.BASE_URL, typeof window !== 'undefined' ? window.location.href : 'http://localhost/').pathname;
+        const computedBasename = resolvedPathname === '/' ? '' : resolvedPathname.replace(/\/$/, '');
+        return (
+          <BrowserRouter basename={computedBasename}>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/programs/velicham" element={<Velicham />} />
+              <Route path="/programs/isthiqaama" element={<Isthiqaama />} />
+              <Route path="/programs/qhls" element={<QHLS />} />
+              <Route path="/programs/inspire" element={<Inspire />} />
+              <Route path="/programs/eelaf" element={<Eelaf />} />
+              <Route path="/programs/other" element={<Other />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        );
+      })()}
     </TooltipProvider>
   </QueryClientProvider>
 );
