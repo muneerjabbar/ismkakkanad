@@ -21,7 +21,7 @@ const Events = () => {
       date: "Monthly",
       location: "Multiple Venues",
       description: "Weekly spiritual gathering focused on steadfastness in faith and community bonding.",
-      logo: "/lovable-uploads/a7868831-0cd8-4bae-9d3f-4453db5c449a.png",
+      logo: import.meta.env.BASE_URL + 'lovable-uploads/a7868831-0cd8-4bae-9d3f-4453db5c449a.png',
       slug: "isthiqaama"
     },
     {
@@ -29,7 +29,7 @@ const Events = () => {
       date: "Twice in a year",
       location: "Dedicated exam centers",
       description: "Grassroots Qur'an learning initiative making Qur'anic education accessible to all.",
-      logo: "/lovable-uploads/f433d109-7df2-4cdd-80d3-333c7c7bd5c2.png",
+      logo: import.meta.env.BASE_URL + 'lovable-uploads/f433d109-7df2-4cdd-80d3-333c7c7bd5c2.png',
       slug: "velicham"
     },
     {
@@ -37,7 +37,7 @@ const Events = () => {
       date: "Weekly",
       location: "Multiple Venues",
       description: "Qur'an & Hadith Learning Series focusing on scriptural literacy and scholarly engagement.",
-      logo: "/lovable-uploads/b4bade68-c4e0-4613-bece-42e21c301817.png",
+      logo: import.meta.env.BASE_URL + 'lovable-uploads/b4bade68-c4e0-4613-bece-42e21c301817.png',
       slug: "qhls"
     },
     {
@@ -45,7 +45,7 @@ const Events = () => {
       date: "IT professionals",
       location: "Multiple Venues",
       description: "Professional wing engaging Muslim professionals in value-based leadership and service.",
-      logo: "/lovable-uploads/c759151f-3f03-42cc-bf0b-2aabc2e64018.png",
+      logo: import.meta.env.BASE_URL + 'lovable-uploads/c759151f-3f03-42cc-bf0b-2aabc2e64018.png',
       slug: "inspire"
     },
     {
@@ -53,7 +53,7 @@ const Events = () => {
       date: "Social service, volunteering",
       location: "Community Centers",
       description: "Volunteer wing engaged in dawah, social outreach, and charitable initiatives.",
-      logo: "/lovable-uploads/886f0498-67b8-4eda-b429-ffc24f779f8c.png",
+      logo: import.meta.env.BASE_URL + 'lovable-uploads/886f0498-67b8-4eda-b429-ffc24f779f8c.png',
       slug: "eelaf"
     },
     {
@@ -90,7 +90,7 @@ const Events = () => {
             <div key={index} className="bg-white dark:bg-slate-700 rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="flex items-center mb-4 sm:mb-6">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white dark:bg-slate-600 rounded-2xl flex items-center justify-center mr-4 overflow-hidden border border-slate-200 dark:border-slate-600">
-                  {event.logo.startsWith('/') ? (
+                  {event.logo && event.logo !== '🌟' ? (
                     <img 
                       src={event.logo} 
                       alt={event.title}

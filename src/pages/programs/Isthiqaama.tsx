@@ -30,7 +30,7 @@ const Isthiqaama = () => {
           <div className="max-w-4xl">
             <div className="flex items-center mb-6">
               <img 
-                src="/lovable-uploads/a7868831-0cd8-4bae-9d3f-4453db5c449a.png" 
+                src={import.meta.env.BASE_URL + 'lovable-uploads/a7868831-0cd8-4bae-9d3f-4453db5c449a.png'} 
                 alt="Isthiqaama"
                 className="w-16 h-16 mr-4 bg-white rounded-lg p-2"
               />

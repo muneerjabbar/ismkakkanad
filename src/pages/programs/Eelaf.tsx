@@ -29,7 +29,7 @@ const Eelaf = () => {
           <div className="max-w-4xl">
             <div className="flex items-center mb-6">
               <img 
-                src="/lovable-uploads/886f0498-67b8-4eda-b429-ffc24f779f8c.png" 
+                src={import.meta.env.BASE_URL + 'lovable-uploads/886f0498-67b8-4eda-b429-ffc24f779f8c.png'} 
                 alt="Eelaf"
                 className="w-16 h-16 mr-4 bg-white rounded-lg p-2"
               />
