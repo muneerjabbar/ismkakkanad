@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "@/hooks/useTheme";
+import { ISM_LOGO_URL } from "@/assets";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,7 +54,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-2">
             <div className="w-10 h-10 rounded-lg flex items-center justify-center overflow-hidden">
               <img 
-                src={import.meta.env.BASE_URL + 'lovable-uploads/f977c6cf-2c72-470d-b5c4-a85ce353b9ad.png'} 
+                src={ISM_LOGO_URL}
                 alt="ISM Kakkanad"
                 className="w-full h-full object-contain"
               />
