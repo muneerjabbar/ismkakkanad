@@ -30,7 +30,7 @@ const QHLS = () => {
           <div className="max-w-4xl">
             <div className="flex items-center mb-6">
               <img 
-                src={import.meta.env.BASE_URL + 'lovable-uploads/b4bade68-c4e0-4613-bece-42e21c301817.png'} 
+                src={import.meta.env.BASE_URL + 'lovable-uploads/qhls_logo.png'} 
                 alt="QHLS"
                 className="w-16 h-16 mr-4 bg-white rounded-lg p-2"
               />

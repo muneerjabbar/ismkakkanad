@@ -31,7 +31,7 @@ const Velicham = () => {
           <div className="max-w-4xl">
             <div className="flex items-center mb-6">
               <img 
-                src={import.meta.env.BASE_URL + 'lovable-uploads/f433d109-7df2-4cdd-80d3-333c7c7bd5c2.png'} 
+                src={import.meta.env.BASE_URL + 'lovable-uploads/velicham_logo.png'} 
                 alt="ISM Velicham"
                 className="w-16 h-16 mr-4 bg-white rounded-lg p-2"
               />

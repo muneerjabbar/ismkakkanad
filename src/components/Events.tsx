@@ -21,7 +21,7 @@ const Events = () => {
       date: "Monthly",
       location: "Multiple Venues",
       description: "Weekly spiritual gathering focused on steadfastness in faith and community bonding.",
-      logo: import.meta.env.BASE_URL + 'lovable-uploads/a7868831-0cd8-4bae-9d3f-4453db5c449a.png',
+      logo: import.meta.env.BASE_URL + 'lovable-uploads/isthiqaama+logo.png',
       slug: "isthiqaama"
     },
     {
@@ -29,7 +29,7 @@ const Events = () => {
       date: "Twice in a year",
       location: "Dedicated exam centers",
       description: "Grassroots Qur'an learning initiative making Qur'anic education accessible to all.",
-      logo: import.meta.env.BASE_URL + 'lovable-uploads/f433d109-7df2-4cdd-80d3-333c7c7bd5c2.png',
+      logo: import.meta.env.BASE_URL + 'lovable-uploads/velicham_logo.png',
       slug: "velicham"
     },
     {
@@ -37,7 +37,7 @@ const Events = () => {
       date: "Weekly",
       location: "Multiple Venues",
       description: "Qur'an & Hadith Learning Series focusing on scriptural literacy and scholarly engagement.",
-      logo: import.meta.env.BASE_URL + 'lovable-uploads/b4bade68-c4e0-4613-bece-42e21c301817.png',
+      logo: import.meta.env.BASE_URL + 'lovable-uploads/qhls_logo.png',
       slug: "qhls"
     },
     {
@@ -45,7 +45,7 @@ const Events = () => {
       date: "IT professionals",
       location: "Multiple Venues",
       description: "Professional wing engaging Muslim professionals in value-based leadership and service.",
-      logo: import.meta.env.BASE_URL + 'lovable-uploads/c759151f-3f03-42cc-bf0b-2aabc2e64018.png',
+      logo: import.meta.env.BASE_URL + 'lovable-uploads/ism_inspire_logo.png',
       slug: "inspire"
     },
     {
@@ -53,7 +53,7 @@ const Events = () => {
       date: "Social service, volunteering",
       location: "Community Centers",
       description: "Volunteer wing engaged in dawah, social outreach, and charitable initiatives.",
-      logo: import.meta.env.BASE_URL + 'lovable-uploads/886f0498-67b8-4eda-b429-ffc24f779f8c.png',
+      logo: import.meta.env.BASE_URL + 'lovable-uploads/eelaf_logo.png',
       slug: "eelaf"
     },
     {

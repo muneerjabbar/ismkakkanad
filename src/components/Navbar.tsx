@@ -53,7 +53,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-2">
             <div className="w-10 h-10 rounded-lg flex items-center justify-center overflow-hidden">
               <img 
-                src={import.meta.env.BASE_URL + 'lovable-uploads/f977c6cf-2c72-470d-b5c4-a85ce353b9ad.png'} 
+                src={import.meta.env.BASE_URL + 'lovable-uploads/ism_kakkanad_logo.png'} 
                 alt="ISM Kakkanad"
                 className="w-full h-full object-contain"
               />
