@@ -29,7 +29,7 @@ const Eelaf = () => {
           <div className="max-w-4xl">
             <div className="flex items-center mb-6">
               <img 
-                src={import.meta.env.BASE_URL + 'lovable-uploads/eelaf_logo.png'} 
+                src={new URL('@/assets/eelaf-logo.png', import.meta.url).href}
                 alt="Eelaf"
                 className="w-16 h-16 mr-4 bg-white rounded-lg p-2"
               />
@@ -107,6 +107,8 @@ const Eelaf = () => {
                 peace, compassion, and social justice. Through our collective efforts, we strive to create a 
                 positive impact in society and demonstrate the true spirit of Islamic brotherhood and service to all.
               </p>
+              <p className="mt-4 text-sm">We actively organize blood donation drives. Your contribution can save lives.</p>
+              <p className="text-sm"><span className="font-semibold">Moosa</span> — [add phone number]</p>
             </div>
           </div>
         </div>

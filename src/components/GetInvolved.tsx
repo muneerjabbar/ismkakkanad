@@ -4,7 +4,7 @@ import { Users, Calendar, Heart, MessageCircle } from "lucide-react";
 
 const GetInvolved = () => {
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/+919876543210?text=Hi! I would like to know more about ISM Kakkanad programs.', '_blank');
+    window.open('https://chat.whatsapp.com/JnpD7MIl3e9JRSVC4on3bv', '_blank', 'noopener');
   };
 
   return (
@@ -32,9 +32,15 @@ const GetInvolved = () => {
               <p className="text-slate-600 dark:text-slate-300 mb-4 sm:mb-6">
                 Join our growing community of young Muslims committed to positive change.
               </p>
-              <Button className="bg-emerald-600 text-white hover:bg-emerald-700 font-semibold px-6 py-3 rounded-full">
-                Join Now
-              </Button>
+              <a
+                href="https://wa.me/9400095648?text=Assalamu%20Alaikum"
+                target="_blank"
+                rel="noopener"
+              >
+                <Button className="bg-emerald-600 text-white hover:bg-emerald-700 font-semibold px-6 py-3 rounded-full">
+                  Join Now
+                </Button>
+              </a>
             </div>
           </div>
           
@@ -44,14 +50,20 @@ const GetInvolved = () => {
                 <Calendar className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-600 dark:text-slate-300" />
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-slate-800 dark:text-white mb-2 sm:mb-4">
-                Attend Events
+                Watch event
               </h3>
               <p className="text-slate-600 dark:text-slate-300 mb-4 sm:mb-6">
                 Participate in our workshops, seminars, and community activities.
               </p>
-              <Button className="bg-emerald-600 text-white hover:bg-emerald-700 font-semibold px-6 py-3 rounded-full">
-                View Events
-              </Button>
+              <a
+                href="https://youtube.com/@isminspire?si=IqTmKwnNXyVPpJUr"
+                target="_blank"
+                rel="noopener"
+              >
+                <Button className="bg-emerald-600 text-white hover:bg-emerald-700 font-semibold px-6 py-3 rounded-full">
+                  Watch event
+                </Button>
+              </a>
             </div>
           </div>
           
@@ -61,14 +73,20 @@ const GetInvolved = () => {
                 <Heart className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-600 dark:text-slate-300" />
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-slate-800 dark:text-white mb-2 sm:mb-4">
-                Volunteer
+                Donate
               </h3>
               <p className="text-slate-600 dark:text-slate-300 mb-4 sm:mb-6">
-                Contribute your time and skills to meaningful community projects.
+                Contribute your wealth to meaningful community service.
               </p>
-              <Button className="bg-emerald-600 text-white hover:bg-emerald-700 font-semibold px-6 py-3 rounded-full">
-                Get Started
-              </Button>
+              <a
+                href="upi://pay?pa=hashimrishad-1@okicici&tn=ISM%20Dawah"
+                target="_blank"
+                rel="noopener"
+              >
+                <Button className="bg-emerald-600 text-white hover:bg-emerald-700 font-semibold px-6 py-3 rounded-full">
+                  Donate
+                </Button>
+              </a>
             </div>
           </div>
         </div>

@@ -30,7 +30,7 @@ const QHLS = () => {
           <div className="max-w-4xl">
             <div className="flex items-center mb-6">
               <img 
-                src={import.meta.env.BASE_URL + 'lovable-uploads/qhls_logo.png'} 
+                src={new URL('@/assets/qhls-logo.png', import.meta.url).href}
                 alt="QHLS"
                 className="w-16 h-16 mr-4 bg-white rounded-lg p-2"
               />
@@ -103,6 +103,10 @@ const QHLS = () => {
                 to accommodate both beginners and advanced students, ensuring everyone can benefit from this comprehensive 
                 approach to Islamic education and scholarly engagement.
               </p>
+              <div className="mt-6 space-y-1 text-sm">
+                <div><span className="font-semibold">Convenor:</span> Riyas — +91 98765 11111</div>
+                <div><span className="font-semibold">Co-Convenor:</span> Irshad — +91 98765 22222</div>
+              </div>
             </div>
           </div>
         </div>

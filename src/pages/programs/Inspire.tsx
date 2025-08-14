@@ -30,13 +30,17 @@ const Inspire = () => {
           <div className="max-w-4xl">
             <div className="flex items-center mb-6">
               <img 
-                src={import.meta.env.BASE_URL + 'lovable-uploads/ism_inspire_logo.png'} 
+                src={new URL('@/assets/ism-inspire-logo.png', import.meta.url).href}
                 alt="ISM Inspire"
                 className="w-16 h-16 mr-4 bg-white rounded-lg p-2"
               />
               <div>
                 <h1 className="text-4xl sm:text-5xl font-bold mb-2">ISM Inspire</h1>
                 <p className="text-xl text-purple-100">Professional Wing for Value-Based Leadership</p>
+                <p className="text-sm text-purple-100">
+                  <a href="https://www.isminspire.com/" target="_blank" rel="noopener" className="underline">isminspire.com</a> ·
+                  <a href="https://chat.whatsapp.com/KQANsVoGM9xLSqBjZYQyHx" target="_blank" rel="noopener" className="underline ml-2">Join WhatsApp</a>
+                </p>
               </div>
             </div>
           </div>

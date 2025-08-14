@@ -20,8 +20,8 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-slate-400 mb-4 max-w-md">
-              Empowering tomorrow's leaders through faith, knowledge, and community service. 
-              Building a generation of confident, compassionate young Muslims.
+              Islamic Service Movement (ISM) is the youth wing inspired by Kerala Nadvathul Mujahideen (KNM),
+              dedicated to Da‘wah on the way of the Salaf, cultivating knowledge, character, and service among youth.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="bg-slate-800 hover:bg-emerald-600 p-2 rounded-lg transition-colors duration-300">

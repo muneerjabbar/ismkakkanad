@@ -30,13 +30,16 @@ const Isthiqaama = () => {
           <div className="max-w-4xl">
             <div className="flex items-center mb-6">
               <img 
-                src={import.meta.env.BASE_URL + 'lovable-uploads/isthiqaama_logo.png'} 
+                src={new URL('@/assets/isthiqaama-logo.png', import.meta.url).href}
                 alt="Isthiqaama"
                 className="w-16 h-16 mr-4 bg-white rounded-lg p-2"
               />
               <div>
                 <h1 className="text-4xl sm:text-5xl font-bold mb-2">Isthiqaama</h1>
-                <p className="text-xl text-blue-100">Steadfastness in Faith and Community</p>
+                <p className="text-xl text-blue-100">Steadfastness in Faith and Family — Community</p>
+                <p className="text-sm text-blue-100">
+                  <a href="https://chat.whatsapp.com/JnpD7MIl3e9JRSVC4on3bv" target="_blank" rel="noopener" className="underline">Realtime updates</a>
+                </p>
               </div>
             </div>
           </div>

@@ -31,7 +31,7 @@ const Velicham = () => {
           <div className="max-w-4xl">
             <div className="flex items-center mb-6">
               <img 
-                src={import.meta.env.BASE_URL + 'lovable-uploads/velicham_logo.png'} 
+                src={new URL('@/assets/velicham-logo.png', import.meta.url).href}
                 alt="ISM Velicham"
                 className="w-16 h-16 mr-4 bg-white rounded-lg p-2"
               />
@@ -112,6 +112,10 @@ const Velicham = () => {
                 By encouraging consistent, structured, and meaningful Qur'anic engagement, Velicham invites every soul toward the 
                 straight path of truth: <strong>"ഖുർആൻ നേരിൻ്റെ നേർവഴി"</strong>.
               </p>
+              <div className="mt-6 space-y-1 text-sm">
+                <div><span className="font-semibold">Convenor:</span> Unais — +91 98765 43210</div>
+                <div><span className="font-semibold">Co-Convenor:</span> Ameen — +91 90123 45678</div>
+              </div>
             </div>
           </div>
         </div>
