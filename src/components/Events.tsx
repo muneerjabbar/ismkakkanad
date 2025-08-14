@@ -21,7 +21,7 @@ const Events = () => {
       date: "Monthly",
       location: "Multiple Venues",
       description: "Weekly spiritual gathering focused on steadfastness in faith and community bonding.",
-      logo: import.meta.env.BASE_URL + 'lovable-uploads/isthiqaama+logo.png',
+      logo: import.meta.env.BASE_URL + 'lovable-uploads/isthiqaama_logo.png',
       slug: "isthiqaama"
     },
     {
@@ -94,7 +94,7 @@ const Events = () => {
                     <img 
                       src={event.logo} 
                       alt={event.title}
-                      className="w-full h-full object-contain p-1"
+                      className="w-full h-full object-contain p-0.5 scale-[1.1] sm:scale-[1.12] md:scale-[1.15] transition-transform duration-300"
                     />
                   ) : (
                     <span className="text-2xl">{event.logo}</span>

@@ -27,7 +27,7 @@ const Hero = () => {
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             ISM Kakkanad Zone
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-pink-300 mt-2">
-              Empowering Tomorrow's Leaders
+              Da‘wah ‘ala Manhaj as-Salaf — Calling to the Pure Path
             </span>
           </h1>
           

@@ -112,8 +112,8 @@ const Testimonials = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
+            <CarouselPrevious className="flex z-20 h-11 w-11" />
+            <CarouselNext className="flex z-20 h-11 w-11" />
           </Carousel>
         </div>
       </div>
