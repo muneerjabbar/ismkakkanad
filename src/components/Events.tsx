@@ -89,7 +89,7 @@ const Events = () => {
           {events.map((event, index) => (
             <div key={index} className="bg-white dark:bg-slate-700 rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="flex items-center mb-4 sm:mb-6">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white dark:bg-slate-600 rounded-2xl flex items-center justify-center mr-4 overflow-hidden border border-slate-200 dark:border-slate-600">
+                <div className="w-14 h-14 sm:w-18 sm:h-18 bg-white dark:bg-slate-600 rounded-2xl flex items-center justify-center mr-4 overflow-hidden border border-slate-200 dark:border-slate-600">
                   {event.logo && event.logo !== '🌟' ? (
                     <img 
                       src={event.logo} 

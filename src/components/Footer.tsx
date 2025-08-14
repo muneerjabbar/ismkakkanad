@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
               <img 
-                src={import.meta.env.BASE_URL + 'lovable-uploads/ism_kakkanad_logo.png'} 
+                src={new URL('@/assets/ism-kakkanad-logo.png', import.meta.url).href}
                 alt="ISM Kakkanad" 
                 className="w-12 h-12 mr-3"
               />
@@ -20,8 +20,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-slate-400 mb-4 max-w-md">
-              Islamic Service Movement (ISM) is the youth wing inspired by Kerala Nadvathul Mujahideen (KNM),
-              dedicated to Da‘wah on the way of the Salaf, cultivating knowledge, character, and service among youth.
+              Calling people to the pure message of Islam, as taught by the Qur’an and Sunnah upon the way of the Salaf as-Saaliheen. We strive to spread guidance, revive faith, and serve humanity for the pleasure of Allah.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="bg-slate-800 hover:bg-emerald-600 p-2 rounded-lg transition-colors duration-300">

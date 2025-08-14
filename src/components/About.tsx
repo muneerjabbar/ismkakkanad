@@ -33,36 +33,36 @@ const About = () => {
           <div className="relative">
             <div className="bg-gradient-to-br from-emerald-100 to-teal-100 dark:from-slate-800 dark:to-slate-700 rounded-2xl p-8 shadow-xl">
               <div className="grid grid-cols-2 gap-6">
-                <div className="text-center">
+                <div className="text-center" aria-label="Da‘wah First">
+                  <div className="w-16 h-16 bg-emerald-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <Heart className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="font-semibold text-slate-800 dark:text-white mb-2">Da‘wah First</h3>
+                  <p className="text-sm text-slate-600 dark:text-slate-300">Spreading the light of Islam to hearts and minds.</p>
+                </div>
+                
+                <div className="text-center" aria-label="Education">
+                  <div className="w-16 h-16 bg-teal-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <BookOpen className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="font-semibold text-slate-800 dark:text-white mb-2">Education</h3>
+                  <p className="text-sm text-slate-600 dark:text-slate-300">Providing complete and authentic Islamic learning.</p>
+                </div>
+                
+                <div className="text-center" aria-label="Community Focus">
                   <div className="w-16 h-16 bg-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Users className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="font-semibold text-slate-800 dark:text-white mb-2">Community Focus</h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-300">Building stronger Muslim communities</p>
+                  <p className="text-sm text-slate-600 dark:text-slate-300">Strengthening and serving people and country.</p>
                 </div>
                 
-                <div className="text-center">
+                <div className="text-center" aria-label="Value-Driven">
                   <div className="w-16 h-16 bg-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Target className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="font-semibold text-slate-800 dark:text-white mb-2">Clear Mission</h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-300">Empowering youth with purpose</p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-emerald-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <Heart className="w-8 h-8 text-white" />
-                  </div>
                   <h3 className="font-semibold text-slate-800 dark:text-white mb-2">Value-Driven</h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-300">Rooted in Islamic principles</p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-teal-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <BookOpen className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="font-semibold text-slate-800 dark:text-white mb-2">Education First</h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-300">Comprehensive learning approach</p>
+                  <p className="text-sm text-slate-600 dark:text-slate-300">Guided by Qur’an, Sunnah, and timeless principles.</p>
                 </div>
               </div>
             </div>

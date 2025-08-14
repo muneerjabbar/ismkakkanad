@@ -113,8 +113,15 @@ const Velicham = () => {
                 straight path of truth: <strong>"ഖുർആൻ നേരിൻ്റെ നേർവഴി"</strong>.
               </p>
               <div className="mt-6 space-y-1 text-sm">
-                <div><span className="font-semibold">Convenor:</span> Unais — +91 98765 43210</div>
-                <div><span className="font-semibold">Co-Convenor:</span> Ameen — +91 90123 45678</div>
+                <div><span className="font-semibold">Kakkanad Zone Convenor:</span> Unais MA — 9544581275</div>
+                <div><span className="font-semibold">Athani Unit:</span> Ameer MN — 989599569</div>
+                <div><span className="font-semibold">Kakkanad Unit:</span> Sali MA — 9847873472</div>
+                <div><span className="font-semibold">Kangarapady Unit:</span> Nasar — 7510228619</div>
+                <div><span className="font-semibold">Mattekkad Unit:</span> Wahab — 8921318657</div>
+                <div><span className="font-semibold">Kalamassery Unit:</span> Rafeek KB — 9387584316</div>
+                <div><span className="font-semibold">Edappalli Unit:</span> Mahin — 9947914955</div>
+                <div><span className="font-semibold">Cheranalloor Unit:</span> Shebin — 8891808889</div>
+                <div><span className="font-semibold">Padamugal Unit:</span> Latheef — 9567839629</div>
               </div>
             </div>
           </div>

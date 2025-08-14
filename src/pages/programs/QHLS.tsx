@@ -104,8 +104,15 @@ const QHLS = () => {
                 approach to Islamic education and scholarly engagement.
               </p>
               <div className="mt-6 space-y-1 text-sm">
-                <div><span className="font-semibold">Convenor:</span> Riyas — +91 98765 11111</div>
-                <div><span className="font-semibold">Co-Convenor:</span> Irshad — +91 98765 22222</div>
+                <div><span className="font-semibold">Kakkanad Zone Convenor:</span> Riyas — 8891110025</div>
+                <div><span className="font-semibold">Athani Unit:</span> Muneer — 9400095648</div>
+                <div><span className="font-semibold">Kakkanad Unit:</span> Riyas — 8891110025</div>
+                <div><span className="font-semibold">Kangarapady Unit:</span> Nasar — 7510228619</div>
+                <div><span className="font-semibold">Mattekkad Unit:</span> Wahab — 8921318657</div>
+                <div><span className="font-semibold">Kalamassery Unit:</span> Rafeek KB — 9387584316</div>
+                <div><span className="font-semibold">Edappalli Unit:</span> Mahin — 9947914955</div>
+                <div><span className="font-semibold">Cheranalloor Unit:</span> Shebin — 8891808889</div>
+                <div><span className="font-semibold">Padamugal Unit:</span> Latheef — 9567839629</div>
               </div>
             </div>
           </div>
