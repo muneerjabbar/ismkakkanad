@@ -1,5 +1,7 @@
 
-import { Quote } from "lucide-react";
+import { Quote, ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
+import { useEffect, useState, useCallback, useRef } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 import {
   Carousel,
   CarouselContent,
@@ -7,6 +9,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 interface Testimonial {
   quote: string;
@@ -16,6 +20,13 @@ interface Testimonial {
 }
 
 const Testimonials = () => {
+  const isMobile = useIsMobile();
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
+  const [api, setApi] = useState<any>(null);
+
   const testimonials: Testimonial[] = [
     {
       quote: `ദഅ്'വാ രംഗത്ത് നല്ലൊരു മാതൃകയാണ് ഐ.എസ്.എം. കാക്കനാട് മണ്ഡലം. ദഅ്'വാ രംഗത്ത് വ്യത്യസ്തമായ ഒട്ടനവധി പരിപാടികൾ സംഘടിപ്പിച്ചുകൊണ്ട് മുന്നേറുന്ന കാക്കനാട് മണ്ഡലം, ഐ.ടി. മേഖലയിലെയും പുതിയ വെബ്സൈറ്റ് ലോഞ്ചിലൂടെയും മറ്റുള്ളവർക്കു മാതൃകയാവുകയാണ്. നാഥൻ അനുഗ്രഹിക്കട്ടെ. ഇതെല്ലാം സ്വാലിഹായ അമലായി സ്വീകരിക്കട്ടെ.`,
@@ -52,19 +63,92 @@ const Testimonials = () => {
       name: "സഗീർ കാക്കനാട്",
       role: "മണ്ഡലം സെക്രട്ടറി, കെ.എൻ.എം. കാക്കനാട്",
       avatar: import.meta.env.BASE_URL + 'lovable-uploads/sageer.png'
-      
     },
     {
       quote: `യുവതയുടെ കർമോത്സുകതയാണ് ഏതൊരു സംഘടനയുടെയും ചാലകശക്തി, കാക്കനാട് മണ്ഡലം കെ.എൻ.എമ്മിന്റെയും. ഐ.ടി. വിപ്ലവത്തിന്റെ ഈ കാലത്ത് സ്വന്തമായി ഒരു വെബ്സൈറ്റ് അനിവാര്യമാണ്. അതിലേക്കുള്ള ചുവടുവെയ്പാണ് ഐ.എസ്.എം. കാക്കനാട് മണ്ഡലം നടത്തുന്നത്. എല്ലാ വിജയാശംസകളും. ജഗന്നിയതാവ് അനുഗ്രഹിക്കട്ടെ.`,
       name: "ഡോ. അബ്ദുൽ റഷീദ്",
       role: "വൈസ് പ്രസിഡൻറ്, കെ.എൻ.എം. കാക്കനാട് മണ്ഡലം",
       avatar: import.meta.env.BASE_URL + 'lovable-uploads/dr_abdul_rasheed.jpg'
-      
     }
   ];
 
+  // Auto-play functionality
+  const startAutoPlay = useCallback(() => {
+    if (autoPlayRef.current) {
+      clearInterval(autoPlayRef.current);
+    }
+    
+    autoPlayRef.current = setInterval(() => {
+      if (api && isPlaying) {
+        api.scrollNext();
+      }
+    }, 2000);
+  }, [api, isPlaying]);
+
+  const stopAutoPlay = useCallback(() => {
+    if (autoPlayRef.current) {
+      clearInterval(autoPlayRef.current);
+      autoPlayRef.current = null;
+    }
+  }, []);
+
+  const toggleAutoPlay = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  // Handle slide change
+  const onSelect = useCallback(() => {
+    if (api) {
+      setCurrentSlide(api.selectedScrollSnap());
+    }
+  }, [api]);
+
+  // Setup carousel API and event listeners
+  useEffect(() => {
+    if (api) {
+      api.on('select', onSelect);
+      onSelect();
+    }
+  }, [api, onSelect]);
+
+  // Auto-play effect
+  useEffect(() => {
+    if (isPlaying) {
+      startAutoPlay();
+    } else {
+      stopAutoPlay();
+    }
+
+    return () => stopAutoPlay();
+  }, [isPlaying, startAutoPlay, stopAutoPlay]);
+
+  // Hover state management (for visual effects only)
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  // Touch/swipe support for mobile (visual feedback only)
+  const handleTouchStart = () => {
+    setIsHovered(true);
+  };
+
+  const handleTouchEnd = () => {
+    setTimeout(() => setIsHovered(false), 1000);
+  };
+
   return (
-    <section id="testimonials" className="py-12 sm:py-16 lg:py-20 bg-emerald-50 dark:bg-slate-800 transition-colors duration-300">
+    <section 
+      id="testimonials" 
+      className="py-12 sm:py-16 lg:py-20 bg-emerald-50 dark:bg-slate-800 transition-colors duration-300"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-800 dark:text-white mb-4 sm:mb-6">
@@ -76,18 +160,62 @@ const Testimonials = () => {
           </p>
         </div>
         
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto relative">
+          {/* Auto-play controls */}
+          <div className="flex justify-center mb-6">
+            <Button
+              onClick={toggleAutoPlay}
+              variant="outline"
+              size="sm"
+              className="flex items-center gap-2 bg-white dark:bg-slate-700 hover:bg-emerald-50 dark:hover:bg-slate-600 border-emerald-200 dark:border-slate-600"
+            >
+              {isPlaying ? (
+                <>
+                  <Pause className="w-4 h-4" />
+                  <span className="hidden sm:inline">Pause</span>
+                </>
+              ) : (
+                <>
+                  <Play className="w-4 h-4" />
+                  <span className="hidden sm:inline">Play</span>
+                </>
+              )}
+            </Button>
+          </div>
+
+          {/* Progress indicator */}
+          <div className="flex justify-center mb-6">
+            <div className="flex gap-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => api?.scrollTo(index)}
+                  className={cn(
+                    "w-2 h-2 rounded-full transition-all duration-300",
+                    index === currentSlide
+                      ? "bg-emerald-600 dark:bg-emerald-400 w-6"
+                      : "bg-emerald-200 dark:bg-emerald-700 hover:bg-emerald-300 dark:hover:bg-emerald-600"
+                  )}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+
           <Carousel
+            setApi={setApi}
             opts={{
               align: "start",
               loop: true,
+              skipSnaps: false,
+              dragFree: false,
             }}
-            className="w-full"
+            className="w-full group"
           >
             <CarouselContent className="-ml-2 md:-ml-4">
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <div className="bg-white dark:bg-slate-700 rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+                  <div className="bg-white dark:bg-slate-700 rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 h-full transform hover:scale-[1.02]">
                     <div className="flex items-center mb-4 sm:mb-6">
                       <Quote className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-600 dark:text-emerald-400 mr-4" />
                       <div className="w-12 h-1 bg-emerald-600 dark:bg-emerald-400"></div>
@@ -100,8 +228,9 @@ const Testimonials = () => {
                     <div className="flex items-center">
                       <img 
                         src={testimonial.avatar} 
-                        alt="Testimonial portrait"
-                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover mr-4"
+                        alt={`${testimonial.name} portrait`}
+                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover mr-4 ring-2 ring-emerald-100 dark:ring-emerald-900"
+                        loading="lazy"
                       />
                       <div>
                         <div className="font-malayalam font-semibold text-slate-800 dark:text-white text-sm sm:text-base">{testimonial.name}</div>
@@ -112,9 +241,22 @@ const Testimonials = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="flex z-20 h-11 w-11" />
-            <CarouselNext className="flex z-20 h-11 w-11" />
+
+            {/* Enhanced navigation buttons */}
+            <CarouselPrevious className="flex z-20 h-12 w-12 bg-white dark:bg-slate-700 border-emerald-200 dark:border-slate-600 hover:bg-emerald-50 dark:hover:bg-slate-600 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <CarouselNext className="flex z-20 h-12 w-12 bg-white dark:bg-slate-700 border-emerald-200 dark:border-slate-600 hover:bg-emerald-50 dark:hover:bg-slate-600 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </Carousel>
+
+          {/* Mobile-friendly swipe hint */}
+          {isMobile && (
+            <div className="text-center mt-6 text-sm text-slate-500 dark:text-slate-400">
+              <div className="flex items-center justify-center gap-2">
+                <ChevronLeft className="w-4 h-4" />
+                <span>Swipe to navigate</span>
+                <ChevronRight className="w-4 h-4" />
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>
