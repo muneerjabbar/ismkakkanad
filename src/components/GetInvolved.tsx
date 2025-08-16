@@ -4,7 +4,7 @@ import { Users, Calendar, Heart, MessageCircle } from "lucide-react";
 
 const GetInvolved = () => {
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/+919876543210?text=Hi! I would like to know more about ISM Kakkanad programs.', '_blank');
+    window.open('https://chat.whatsapp.com/JnpD7MIl3e9JRSVC4on3bv', '_blank');
   };
 
   return (
