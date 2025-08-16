@@ -33,7 +33,6 @@ const App = () => (
               <Route path="/programs/inspire" element={<Inspire />} />
               <Route path="/programs/eelaf" element={<Eelaf />} />
               <Route path="/programs/other" element={<Other />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
