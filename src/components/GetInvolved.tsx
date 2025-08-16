@@ -33,7 +33,7 @@ const GetInvolved = () => {
                 Join our growing community of young Muslims committed to positive change.
               </p>
               <a
-                href="https://wa.me/9400095648?text=Assalamu%20Alaikum"
+                href="https://wa.me/+91 9400095648?text=Assalamu%20Alaikum"
                 target="_blank"
                 rel="noopener"
               >
