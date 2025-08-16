@@ -105,7 +105,7 @@ const QHLS = () => {
               </p>
               <div className="mt-6 space-y-1 text-sm">
                 <div><span className="font-semibold">Kakkanad Zone Convenor:</span> Riyas — 8891110025</div>
-                <div><span className="font-semibold">Athani Unit:</span> Muneer — +91 9400095648</div>
+                <div><span className="font-semibold">Athani Unit:</span> Muneer — +919400095648</div>
                 <div><span className="font-semibold">Kakkanad Unit:</span> Riyas — 8891110025</div>
                 <div><span className="font-semibold">Kangarapady Unit:</span> Nasar — 7510228619</div>
                 <div><span className="font-semibold">Mattekkad Unit:</span> Wahab — 8921318657</div>
