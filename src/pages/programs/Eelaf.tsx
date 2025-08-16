@@ -108,7 +108,7 @@ const Eelaf = () => {
                 positive impact in society and demonstrate the true spirit of Islamic brotherhood and service to all.
               </p>
               <p className="mt-4 text-sm">We actively organize blood donation drives. Your contribution can save lives.</p>
-              <p className="text-sm"><span className="font-semibold">Moosa</span> — [add phone number]</p>
+              <p className="text-sm"><span className="font-semibold">Moosa</span> — +91 99953 79212</p>
             </div>
           </div>
         </div>
