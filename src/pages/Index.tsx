@@ -6,7 +6,7 @@ import About from "@/components/About";
 import Pillars from "@/components/Pillars";
 import Events from "@/components/Events";
 import Leadership from "@/components/Leadership";
-import Impact from "@/components/Impact";
+import MasjidsMadrasas from "@/components/MasjidsMadrasas";
 import Testimonials from "@/components/Testimonials";
 import GetInvolved from "@/components/GetInvolved";
 import Footer from "@/components/Footer";
@@ -21,7 +21,7 @@ const Index = () => {
         <Pillars />
         <Events />
         <Leadership />
-        <Impact />
+        <MasjidsMadrasas />
         <Testimonials />
         <GetInvolved />
         <Footer />

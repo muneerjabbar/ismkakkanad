@@ -3,12 +3,14 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Book, Users, Award, Home } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/hooks/useTheme";
 
 const Velicham = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-900 transition-colors duration-300">
+    <ThemeProvider>
+      <div className="min-h-screen bg-white dark:bg-slate-900 transition-colors duration-300">
       {/* Header */}
       <div className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-20">
         <div className="container mx-auto px-4 sm:px-6">
@@ -31,9 +33,13 @@ const Velicham = () => {
           <div className="max-w-4xl">
             <div className="flex items-center mb-6">
               <img 
-                src={import.meta.env.BASE_URL + 'lovable-uploads/f433d109-7df2-4cdd-80d3-333c7c7bd5c2.png'} 
+                src={import.meta.env.BASE_URL + 'lovable-uploads/velicham_logo.png'} 
                 alt="ISM Velicham"
                 className="w-16 h-16 mr-4 bg-white rounded-lg p-2"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = import.meta.env.BASE_URL + 'placeholder.svg';
+                }}
               />
               <div>
                 <h1 className="text-4xl sm:text-5xl font-bold mb-2">ISM Velicham</h1>
@@ -106,6 +112,113 @@ const Velicham = () => {
               </div>
             </div>
 
+            <h2 className="text-2xl font-bold text-slate-800 dark:text-white mb-6">Unit Coordinators</h2>
+            
+            {/* Zone Convenor - Special Highlighted Box */}
+            <div className="mb-6">
+              <div className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white p-6 rounded-2xl shadow-xl border-2 border-emerald-400 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-20 h-20 bg-white/10 rounded-full -mr-10 -mt-10"></div>
+                <div className="absolute bottom-0 left-0 w-16 h-16 bg-white/10 rounded-full -ml-8 -mb-8"></div>
+                <div className="relative z-10">
+                  <div className="flex items-center mb-3">
+                    <div className="w-4 h-4 bg-yellow-400 rounded-full mr-3 shadow-lg"></div>
+                    <h4 className="font-bold text-lg">Kakkanad Zone Convenor</h4>
+                    <div className="ml-auto bg-white/20 px-3 py-1 rounded-full text-sm font-medium">
+                      Zone Leader
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-xl font-bold text-white">Unais MA</p>
+                      <p className="text-emerald-100 font-medium">📞 9544581275</p>
+                    </div>
+                    <div className="text-right">
+                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                        <Users className="w-6 h-6 text-white" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Unit Coordinators */}
+            <h3 className="text-lg font-semibold text-slate-800 dark:text-white mb-4">Unit Coordinators</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+              
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-slate-800 dark:to-slate-700 p-4 rounded-xl border border-emerald-200 dark:border-slate-600 hover:shadow-lg transition-all duration-300">
+                <div className="flex items-center mb-2">
+                  <div className="w-3 h-3 bg-emerald-600 rounded-full mr-2"></div>
+                  <h4 className="font-semibold text-slate-800 dark:text-white text-sm">Athani Unit</h4>
+                </div>
+                <p className="text-emerald-700 dark:text-emerald-300 font-medium">Ameer MN</p>
+                <p className="text-slate-600 dark:text-slate-300 text-sm">9895995569</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-slate-800 dark:to-slate-700 p-4 rounded-xl border border-emerald-200 dark:border-slate-600 hover:shadow-lg transition-all duration-300">
+                <div className="flex items-center mb-2">
+                  <div className="w-3 h-3 bg-emerald-600 rounded-full mr-2"></div>
+                  <h4 className="font-semibold text-slate-800 dark:text-white text-sm">Kakkanad Unit</h4>
+                </div>
+                <p className="text-emerald-700 dark:text-emerald-300 font-medium">Sali MA</p>
+                <p className="text-slate-600 dark:text-slate-300 text-sm">9847873472</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-slate-800 dark:to-slate-700 p-4 rounded-xl border border-emerald-200 dark:border-slate-600 hover:shadow-lg transition-all duration-300">
+                <div className="flex items-center mb-2">
+                  <div className="w-3 h-3 bg-emerald-600 rounded-full mr-2"></div>
+                  <h4 className="font-semibold text-slate-800 dark:text-white text-sm">Kangarapady Unit</h4>
+                </div>
+                <p className="text-emerald-700 dark:text-emerald-300 font-medium">Nasar</p>
+                <p className="text-slate-600 dark:text-slate-300 text-sm">7510228619</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-slate-800 dark:to-slate-700 p-4 rounded-xl border border-emerald-200 dark:border-slate-600 hover:shadow-lg transition-all duration-300">
+                <div className="flex items-center mb-2">
+                  <div className="w-3 h-3 bg-emerald-600 rounded-full mr-2"></div>
+                  <h4 className="font-semibold text-slate-800 dark:text-white text-sm">Mattekkad Unit</h4>
+                </div>
+                <p className="text-emerald-700 dark:text-emerald-300 font-medium">Wahab</p>
+                <p className="text-slate-600 dark:text-slate-300 text-sm">8921318657</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-slate-800 dark:to-slate-700 p-4 rounded-xl border border-emerald-200 dark:border-slate-600 hover:shadow-lg transition-all duration-300">
+                <div className="flex items-center mb-2">
+                  <div className="w-3 h-3 bg-emerald-600 rounded-full mr-2"></div>
+                  <h4 className="font-semibold text-slate-800 dark:text-white text-sm">Kalamassery Unit</h4>
+                </div>
+                <p className="text-emerald-700 dark:text-emerald-300 font-medium">Rafeek KB</p>
+                <p className="text-slate-600 dark:text-slate-300 text-sm">9387584316</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-slate-800 dark:to-slate-700 p-4 rounded-xl border border-emerald-200 dark:border-slate-600 hover:shadow-lg transition-all duration-300">
+                <div className="flex items-center mb-2">
+                  <div className="w-3 h-3 bg-emerald-600 rounded-full mr-2"></div>
+                  <h4 className="font-semibold text-slate-800 dark:text-white text-sm">Edappalli Unit</h4>
+                </div>
+                <p className="text-emerald-700 dark:text-emerald-300 font-medium">Mahin</p>
+                <p className="text-slate-600 dark:text-slate-300 text-sm">9947914955</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-slate-800 dark:to-slate-700 p-4 rounded-xl border border-emerald-200 dark:border-slate-600 hover:shadow-lg transition-all duration-300">
+                <div className="flex items-center mb-2">
+                  <div className="w-3 h-3 bg-emerald-600 rounded-full mr-2"></div>
+                  <h4 className="font-semibold text-slate-800 dark:text-white text-sm">Cheranalloor Unit</h4>
+                </div>
+                <p className="text-emerald-700 dark:text-emerald-300 font-medium">Shebin</p>
+                <p className="text-slate-600 dark:text-slate-300 text-sm">8891808889</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-slate-800 dark:to-slate-700 p-4 rounded-xl border border-emerald-200 dark:border-slate-600 hover:shadow-lg transition-all duration-300">
+                <div className="flex items-center mb-2">
+                  <div className="w-3 h-3 bg-emerald-600 rounded-full mr-2"></div>
+                  <h4 className="font-semibold text-slate-800 dark:text-white text-sm">Padamugal Unit</h4>
+                </div>
+                <p className="text-emerald-700 dark:text-emerald-300 font-medium">Latheef</p>
+                <p className="text-slate-600 dark:text-slate-300 text-sm">9567839629</p>
+              </div>
+            </div>
+
             <div className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white p-8 rounded-lg">
               <p className="text-lg leading-relaxed">
                 Velicham is more than a study program—it is a movement to illuminate hearts and minds with the light of the Qur'an. 
@@ -117,8 +230,9 @@ const Velicham = () => {
         </div>
       </div>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 };
 

@@ -12,6 +12,8 @@ import QHLS from "./pages/programs/QHLS";
 import Inspire from "./pages/programs/Inspire";
 import Eelaf from "./pages/programs/Eelaf";
 import Other from "./pages/programs/Other";
+import Masjids from "./pages/Masjids";
+import Madrasas from "./pages/Madrasas";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +31,8 @@ const App = () => (
           <Route path="/programs/inspire" element={<Inspire />} />
           <Route path="/programs/eelaf" element={<Eelaf />} />
           <Route path="/programs/other" element={<Other />} />
+          <Route path="/masjids" element={<Masjids />} />
+          <Route path="/madrasas" element={<Madrasas />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

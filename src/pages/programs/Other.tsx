@@ -3,12 +3,14 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Star, Calendar, Users } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/hooks/useTheme";
 
 const Other = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-900 transition-colors duration-300">
+    <ThemeProvider>
+      <div className="min-h-screen bg-white dark:bg-slate-900 transition-colors duration-300">
       <div className="bg-gradient-to-r from-orange-600 to-amber-600 text-white py-20">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="flex items-center mb-6">
@@ -29,9 +31,15 @@ const Other = () => {
           
           <div className="max-w-4xl">
             <div className="flex items-center mb-6">
-              <div className="w-16 h-16 mr-4 bg-white rounded-lg flex items-center justify-center">
-                <span className="text-3xl">🌟</span>
-              </div>
+              <img 
+                src={import.meta.env.BASE_URL + 'lovable-uploads/ism_kakkanad_logo.png'} 
+                alt="ISM Kakkanad"
+                className="w-16 h-16 mr-4 bg-white rounded-lg p-2"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = import.meta.env.BASE_URL + 'placeholder.svg';
+                }}
+              />
               <div>
                 <h1 className="text-4xl sm:text-5xl font-bold mb-2">Other Programs</h1>
                 <p className="text-xl text-orange-100">Special Events & Community Initiatives</p>
@@ -110,8 +118,9 @@ const Other = () => {
         </div>
       </div>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 };
 

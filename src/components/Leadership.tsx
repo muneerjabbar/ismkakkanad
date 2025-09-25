@@ -13,27 +13,55 @@ interface Convenor {
   description: string;
 }
 
+interface KNMMember {
+  name: string;
+  position: string;
+  phone: string;
+  image: string;
+}
+
 const Leadership = () => {
   const leaders: Leader[] = [
     {
       name: "Muneer Jabbar",
       position: "President",
-      image: import.meta.env.BASE_URL + 'lovable-uploads/4e9c7c8b-869f-4607-adeb-7ca10af0bb36.png'
+      image: import.meta.env.BASE_URL + 'lovable-uploads/muneer_jabbar.png'
     },
     {
       name: "Mohammad Babu",
       position: "Secretary",
-      image: import.meta.env.BASE_URL + 'lovable-uploads/db258868-e21e-4914-b27b-d71071da1832.png'
+      image: import.meta.env.BASE_URL + 'lovable-uploads/babu.png'
     },
     {
       name: "Rafeek K.B.",
       position: "Organization Secretary",
-      image: import.meta.env.BASE_URL + 'lovable-uploads/b6d1d11c-8c38-4e1e-a06c-66f788b9ebcc.png'
+      image: import.meta.env.BASE_URL + 'lovable-uploads/rafeeq.png'
     },
     {
       name: "Moosa",
       position: "Treasurer",
-      image: import.meta.env.BASE_URL + 'lovable-uploads/1c622ad5-9914-4ed1-abaa-c1d4dcda6488.png'
+      image: import.meta.env.BASE_URL + 'lovable-uploads/moosa.png'
+    }
+  ];
+
+  const knmMembers: KNMMember[] = [
+    {
+      name: "Muhammed Ali A M",
+      position: "President",
+      phone: "9847395050",
+      image: import.meta.env.BASE_URL + 'lovable-uploads/Muhammed Ali A M.jpg'
+    },
+    {
+      name: "Sageer M K",
+      position: "Secretary",
+      phone: "9388839617",
+      image: import.meta.env.BASE_URL + 'lovable-uploads/sageer.png'
+    },
+    {
+      name: "Abdul Azeez",
+      position: "Finance",
+      phone: "9562117799",
+      image: import.meta.env.BASE_URL + 'lovable-uploads/Abdul_Azeez.jpg'
     }
   ];
 
@@ -83,10 +111,43 @@ const Leadership = () => {
           </p>
         </div>
 
+        {/* KNM Zonal Leaders */}
+        <div className="mb-16">
+          <h3 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white mb-8 text-center">
+            KNM Zonal Leaders
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
+            {knmMembers.map((member, index) => (
+              <div key={index} className="bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden mx-auto mb-4 border-4 border-emerald-500">
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = import.meta.env.BASE_URL + 'placeholder.svg';
+                    }}
+                  />
+                </div>
+                <h4 className="text-lg sm:text-xl font-semibold text-slate-800 dark:text-white mb-2">
+                  {member.name}
+                </h4>
+                <p className="text-emerald-600 dark:text-emerald-400 font-medium mb-2">
+                  {member.position}
+                </p>
+                <p className="text-slate-600 dark:text-slate-300 text-sm">
+                  {member.phone}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Executive Leadership */}
         <div className="mb-16">
           <h3 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white mb-8 text-center">
-            Executive Committee
+          ISM Executive Committee
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {leaders.map((leader, index) => (
@@ -96,6 +157,10 @@ const Leadership = () => {
                     src={leader.image} 
                     alt={leader.name}
                     className="w-full h-full object-cover"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = import.meta.env.BASE_URL + 'placeholder.svg';
+                    }}
                   />
                 </div>
                 <h4 className="text-lg sm:text-xl font-semibold text-slate-800 dark:text-white mb-2">
