@@ -62,9 +62,6 @@ npm install
 npm run dev
 ```
 
-### **Using Lovable IDE**
-Visit the [Lovable Project](https://lovable.dev/projects/6e133537-4e8a-43c6-acd1-b9dd7a70f5ab) for AI-powered development.
-
 ### **GitHub Codespaces**
 - Click "Code" → "Codespaces" → "New codespace"
 - Edit directly in the browser environment
