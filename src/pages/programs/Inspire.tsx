@@ -32,7 +32,7 @@ const Inspire = () => {
           <div className="max-w-4xl">
             <div className="flex items-center mb-6">
               <img 
-                src={import.meta.env.BASE_URL + 'lovable-uploads/ism_inspire_logo.png'} 
+                src={import.meta.env.BASE_URL + 'images/ism_inspire_logo.png'} 
                 alt="ISM Inspire"
                 className="w-16 h-16 mr-4 bg-white rounded-lg p-2"
                 onError={(e) => {

@@ -25,22 +25,22 @@ const Leadership = () => {
     {
       name: "Muneer Jabbar",
       position: "President",
-      image: import.meta.env.BASE_URL + 'lovable-uploads/muneer_jabbar.png'
+      image: import.meta.env.BASE_URL + 'images/muneer_jabbar.png'
     },
     {
       name: "Mohammad Babu",
       position: "Secretary",
-      image: import.meta.env.BASE_URL + 'lovable-uploads/babu.png'
+      image: import.meta.env.BASE_URL + 'images/babu.png'
     },
     {
       name: "Rafeek K.B.",
       position: "Organization Secretary",
-      image: import.meta.env.BASE_URL + 'lovable-uploads/rafeeq.png'
+      image: import.meta.env.BASE_URL + 'images/rafeeq.png'
     },
     {
       name: "Moosa",
       position: "Treasurer",
-      image: import.meta.env.BASE_URL + 'lovable-uploads/moosa.png'
+      image: import.meta.env.BASE_URL + 'images/moosa.png'
     }
   ];
 
@@ -49,19 +49,19 @@ const Leadership = () => {
       name: "Muhammed Ali A M",
       position: "President",
       phone: "9847395050",
-      image: import.meta.env.BASE_URL + 'lovable-uploads/Muhammed Ali A M.jpg'
+      image: import.meta.env.BASE_URL + 'images/Muhammed Ali A M.jpg'
     },
     {
       name: "Sageer M K",
       position: "Secretary",
       phone: "9388839617",
-      image: import.meta.env.BASE_URL + 'lovable-uploads/sageer.png'
+      image: import.meta.env.BASE_URL + 'images/sageer.png'
     },
     {
       name: "Abdul Azeez",
       position: "Finance",
       phone: "9562117799",
-      image: import.meta.env.BASE_URL + 'lovable-uploads/Abdul_Azeez.jpg'
+      image: import.meta.env.BASE_URL + 'images/Abdul_Azeez.jpg'
     }
   ];
 

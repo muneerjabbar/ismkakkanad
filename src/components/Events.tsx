@@ -19,7 +19,7 @@ const Events = () => {
       date: "Monthly",
       location: "Multiple Venues",
       description: "Weekly spiritual gathering focused on steadfastness in faith and community bonding.",
-      logo: import.meta.env.BASE_URL + 'lovable-uploads/isthiqaama_logo.png',
+      logo: import.meta.env.BASE_URL + 'images/isthiqaama_logo.png',
       slug: "isthiqaama"
     },
     {
@@ -27,7 +27,7 @@ const Events = () => {
       date: "Twice in a year",
       location: "Dedicated exam centers",
       description: "Grassroots Qur'an learning initiative making Qur'anic education accessible to all.",
-      logo: import.meta.env.BASE_URL + 'lovable-uploads/velicham_logo.png',
+      logo: import.meta.env.BASE_URL + 'images/velicham_logo.png',
       slug: "velicham"
     },
     {
@@ -35,7 +35,7 @@ const Events = () => {
       date: "Weekly",
       location: "Multiple Venues",
       description: "Qur'an & Hadith Learning Series focusing on scriptural literacy and scholarly engagement.",
-      logo: import.meta.env.BASE_URL + 'lovable-uploads/qhls_logo.png',
+      logo: import.meta.env.BASE_URL + 'images/qhls_logo.png',
       slug: "qhls"
     },
     {
@@ -43,7 +43,7 @@ const Events = () => {
       date: "IT professionals",
       location: "Multiple Venues",
       description: "Professional wing engaging Muslim professionals in value-based leadership and service.",
-      logo: import.meta.env.BASE_URL + 'lovable-uploads/ism_inspire_logo.png',
+      logo: import.meta.env.BASE_URL + 'images/ism_inspire_logo.png',
       slug: "inspire"
     },
     {
@@ -51,7 +51,7 @@ const Events = () => {
       date: "Social service, volunteering",
       location: "Community Centers",
       description: "Volunteer wing engaged in dawah, social outreach, and charitable initiatives.",
-      logo: import.meta.env.BASE_URL + 'lovable-uploads/eelaf_logo.png',
+      logo: import.meta.env.BASE_URL + 'images/eelaf_logo.png',
       slug: "eelaf"
     },
     {
@@ -59,7 +59,7 @@ const Events = () => {
       date: "Various",
       location: "Multiple Venues",
       description: "Special seminars, workshops, retreats, and community service programs throughout the year.",
-      logo: import.meta.env.BASE_URL + 'lovable-uploads/ism_kakkanad_logo.png',
+      logo: import.meta.env.BASE_URL + 'images/ism_kakkanad_logo.png',
       slug: "other"
     }
   ];

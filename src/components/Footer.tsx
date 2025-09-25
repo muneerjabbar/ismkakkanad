@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
               <img 
-                src={import.meta.env.BASE_URL + 'lovable-uploads/ism_kakkanad_logo.png'} 
+                src={import.meta.env.BASE_URL + 'images/ism_kakkanad_logo.png'} 
                 alt="ISM Kakkanad" 
                 className="w-12 h-12 mr-3"
                 onError={(e) => {

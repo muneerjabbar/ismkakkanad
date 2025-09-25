@@ -32,7 +32,7 @@ const Other = () => {
           <div className="max-w-4xl">
             <div className="flex items-center mb-6">
               <img 
-                src={import.meta.env.BASE_URL + 'lovable-uploads/ism_kakkanad_logo.png'} 
+                src={import.meta.env.BASE_URL + 'images/ism_kakkanad_logo.png'} 
                 alt="ISM Kakkanad"
                 className="w-16 h-16 mr-4 bg-white rounded-lg p-2"
                 onError={(e) => {

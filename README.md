@@ -126,13 +126,13 @@ src/
 ### **Directory Structure**
 ```
 public/
-├── lovable-uploads/     # Profile pictures and logos
+├── images/             # Profile pictures and logos
 ├── masjids/            # Masjid images (placeholder ready)
 └── madrasas/           # Madrasa images (placeholder ready)
 ```
 
 ### **Adding Images**
-1. **Profile Pictures**: Add to `public/lovable-uploads/`
+1. **Profile Pictures**: Add to `public/images/`
 2. **Masjid Images**: Add to `public/masjids/` with unit names (e.g., `kakkanad.jpg`)
 3. **Madrasa Images**: Add to `public/madrasas/` with unit names (e.g., `athani.jpg`)
 
