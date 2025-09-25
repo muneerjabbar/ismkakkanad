@@ -32,7 +32,10 @@ const GetInvolved = () => {
               <p className="text-slate-600 dark:text-slate-300 mb-4 sm:mb-6">
                 Join our growing community of young Muslims committed to positive change.
               </p>
-              <Button className="bg-emerald-600 text-white hover:bg-emerald-700 font-semibold px-6 py-3 rounded-full">
+              <Button 
+                onClick={() => window.open('https://members.ismkerala.com', '_blank')}
+                className="bg-emerald-600 text-white hover:bg-emerald-700 font-semibold px-6 py-3 rounded-full"
+              >
                 Join Now
               </Button>
             </div>
@@ -49,7 +52,10 @@ const GetInvolved = () => {
               <p className="text-slate-600 dark:text-slate-300 mb-4 sm:mb-6">
                 Participate in our workshops, seminars, and community activities.
               </p>
-              <Button className="bg-emerald-600 text-white hover:bg-emerald-700 font-semibold px-6 py-3 rounded-full">
+              <Button 
+                onClick={() => document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' })}
+                className="bg-emerald-600 text-white hover:bg-emerald-700 font-semibold px-6 py-3 rounded-full"
+              >
                 View Events
               </Button>
             </div>
@@ -66,7 +72,10 @@ const GetInvolved = () => {
               <p className="text-slate-600 dark:text-slate-300 mb-4 sm:mb-6">
                 Contribute your time and skills to meaningful community projects.
               </p>
-              <Button className="bg-emerald-600 text-white hover:bg-emerald-700 font-semibold px-6 py-3 rounded-full">
+              <Button 
+                onClick={() => window.open('https://members.ismkerala.com', '_blank')}
+                className="bg-emerald-600 text-white hover:bg-emerald-700 font-semibold px-6 py-3 rounded-full"
+              >
                 Get Started
               </Button>
             </div>
