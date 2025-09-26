@@ -1,0 +1,168 @@
+[
+  {
+    "unit": "Kakkanad",
+    "masjid": {
+      "name": "Salafi Masjid Kakkanad",
+      "mutawalli": {
+        "name": "PLACEHOLDER",
+        "phone": "PLACEHOLDER"
+      },
+      "location": "https://maps.app.goo.gl/aNw6ZcEZfRGSXWS67?g_st=ac"
+    },
+    "madrasa": {
+      "name": "Salafi Madrasa Kakkanad",
+      "mutawalli": {
+        "name": "PLACEHOLDER",
+        "phone": "PLACEHOLDER"
+      },
+      "sadar_ustad": {
+        "name": "Salman Faris Baqavi",
+        "phone": "PLACEHOLDER"
+      },
+      "location": "https://maps.app.goo.gl/aNw6ZcEZfRGSXWS67?g_st=ac"
+    }
+  },
+  {
+    "unit": "Athani",
+    "masjid": {
+      "name": "Salafi Masjid Athani",
+      "mutawalli": {
+        "name": "PLACEHOLDER",
+        "phone": "PLACEHOLDER"
+      },
+      "location": "https://maps.app.goo.gl/eguCi8XpGmGYHVGm8"
+    },
+    "madrasa": {
+      "name": "Salafi Madrasa Athani",
+      "mutawalli": {
+        "name": "PLACEHOLDER",
+        "phone": "PLACEHOLDER"
+      },
+      "sadar_ustad": {
+        "name": "Anfal Salafi",
+        "phone": "PLACEHOLDER"
+      },
+      "location": "https://maps.app.goo.gl/eguCi8XpGmGYHVGm8"
+    }
+  },
+  {
+    "unit": "Cheranallore",
+    "masjid": {
+      "name": "Salafi Masjid Cheranallore",
+      "mutawalli": {
+        "name": "PLACEHOLDER",
+        "phone": "PLACEHOLDER"
+      },
+      "location": "https://maps.app.goo.gl/nNjZhADwC8xLzuJv7"
+    },
+    "madrasa": {
+      "name": "Salafi Madrasa Cheranallore",
+      "mutawalli": {
+        "name": "PLACEHOLDER",
+        "phone": "PLACEHOLDER"
+      },
+      "sadar_ustad": {
+        "name": "Asif Islahi",
+        "phone": "PLACEHOLDER"
+      },
+      "location": "https://maps.app.goo.gl/nNjZhADwC8xLzuJv7"
+    }
+  },
+  {
+    "unit": "Mattakkad",
+    "masjid": {
+      "name": "Salafi Masjid Mattakkad",
+      "mutawalli": {
+        "name": "PLACEHOLDER",
+        "phone": "PLACEHOLDER"
+      },
+      "location": "https://maps.app.goo.gl/BjGvc5Ywiq3zCHU58?g_st=ac"
+    },
+    "madrasa": {
+      "name": "Salafi Madrasa Mattakkad",
+      "mutawalli": {
+        "name": "PLACEHOLDER",
+        "phone": "PLACEHOLDER"
+      },
+      "sadar_ustad": {
+        "name": "Niyas Swalahi",
+        "phone": "PLACEHOLDER"
+      },
+      "location": "https://maps.app.goo.gl/BjGvc5Ywiq3zCHU58?g_st=ac"
+    }
+  },
+  {
+    "unit": "Edappally",
+    "masjid": {
+      "name": "Salafi Masjid Edappally",
+      "mutawalli": {
+        "name": "PLACEHOLDER",
+        "phone": "PLACEHOLDER"
+      },
+      "location": "https://maps.app.goo.gl/SDYhijru5YTdh2yU9"
+    },
+    "madrasa": {
+      "name": "Salafi Madrasa Edappally",
+      "mutawalli": {
+        "name": "PLACEHOLDER",
+        "phone": "PLACEHOLDER"
+      },
+      "sadar_ustad": {
+        "name": "Mujeeb Salafi",
+        "phone": "PLACEHOLDER"
+      },
+      "location": "https://maps.app.goo.gl/SDYhijru5YTdh2yU9"
+    }
+  },
+  {
+    "unit": "Kalamassery",
+    "masjid": {
+      "name": "Salafi Masjid Kalamassery",
+      "mutawalli": {
+        "name": "PLACEHOLDER",
+        "phone": "PLACEHOLDER"
+      },
+      "location": "https://maps.app.goo.gl/hkayxiLJVcjWd9uR9"
+    },
+    "madrasa": {
+      "name": "Al Huda Madrasa Kalamassery",
+      "mutawalli": {
+        "name": "PLACEHOLDER",
+        "phone": "PLACEHOLDER"
+      },
+      "sadar_ustad": {
+        "name": "Abdul Salam Moulavi",
+        "phone": "PLACEHOLDER"
+      },
+      "location": "https://maps.app.goo.gl/hkayxiLJVcjWd9uR9"
+    }
+  },
+  {
+    "unit": "Kangarappady",
+    "masjid": {
+      "name": "Salafi Masjid Kangarappady",
+      "mutawalli": {
+        "name": "PLACEHOLDER",
+        "phone": "PLACEHOLDER"
+      },
+      "location": "https://maps.app.goo.gl/B2X3YDfrvrwNNF2H6"
+    },
+    "madrasa": {
+      "name": "Salafi Madrasa Kangarappady",
+      "mutawalli": {
+        "name": "PLACEHOLDER",
+        "phone": "PLACEHOLDER"
+      },
+      "sadar_ustad": {
+        "name": "Ithihad Salafi",
+        "phone": "PLACEHOLDER"
+      },
+      "location": "https://maps.app.goo.gl/B2X3YDfrvrwNNF2H6"
+    }
+  },
+  {
+    "unit": "Padamugal",
+    "masjid": null,
+    "madrasa": null
+  }
+]
