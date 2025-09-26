@@ -49,6 +49,11 @@ const Madrasas = () => {
   const [madrasasData, setMadrasasData] = useState<MadrasaData[]>([]);
   const [loading, setLoading] = useState(true);
 
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     const fetchData = async () => {
       try {

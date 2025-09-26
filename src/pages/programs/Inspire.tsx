@@ -2,11 +2,17 @@
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Briefcase, Users, TrendingUp } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/hooks/useTheme";
 
 const Inspire = () => {
   const navigate = useNavigate();
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <ThemeProvider>
