@@ -1,6 +1,7 @@
 
 import { Calendar, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 interface Event {
   title: string;
@@ -64,8 +65,10 @@ const Events = () => {
     }
   ];
 
+  const navigate = useNavigate();
+  
   const handleLearnMore = (slug: string) => {
-    window.location.href = import.meta.env.BASE_URL + `programs/${slug}`;
+    navigate(`/programs/${slug}`);
   };
 
   return (

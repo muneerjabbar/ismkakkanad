@@ -3,12 +3,14 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "@/hooks/useTheme";
+import { useNavigate } from "react-router-dom";
 import { ISM_LOGO_URL } from "@/assets";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const { theme, toggleTheme } = useTheme();
+  const navigate = useNavigate();
 
   const navItems = [
     { name: "Home", href: "#home" },
@@ -42,7 +44,7 @@ const Navbar = () => {
     setIsMenuOpen(false);
     if (href.startsWith('/')) {
       // Handle route navigation
-      window.location.href = href;
+      navigate(href);
     } else {
       // Handle anchor navigation
       const element = document.querySelector(href);

@@ -1,6 +1,8 @@
 import { Building, GraduationCap } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const MasjidsMadrasas = () => {
+    const navigate = useNavigate();
 
     return (
         <section id="masjids-madrasas" className="py-12 sm:py-16 lg:py-20 bg-slate-50 dark:bg-slate-800 transition-colors duration-300">
@@ -19,9 +21,7 @@ const MasjidsMadrasas = () => {
                     <div className="grid md:grid-cols-2 gap-8">
                         {/* Masjids Card */}
                         <div
-                            onClick={() => {
-                                window.location.href = import.meta.env.BASE_URL + 'masjids';
-                            }}
+                            onClick={() => navigate('/masjids')}
                             className="group cursor-pointer bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-slate-700 dark:to-slate-600 p-8 rounded-3xl border-2 border-emerald-200 dark:border-slate-500 hover:border-emerald-400 dark:hover:border-emerald-400 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:scale-105"
                         >
                             <div className="text-center">
@@ -46,9 +46,7 @@ const MasjidsMadrasas = () => {
 
                         {/* Madrasas Card */}
                         <div
-                            onClick={() => {
-                                window.location.href = import.meta.env.BASE_URL + 'madrasas';
-                            }}
+                            onClick={() => navigate('/madrasas')}
                             className="group cursor-pointer bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-700 dark:to-slate-600 p-8 rounded-3xl border-2 border-blue-200 dark:border-slate-500 hover:border-blue-400 dark:hover:border-blue-400 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:scale-105"
                         >
                             <div className="text-center">
