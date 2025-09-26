@@ -33,7 +33,8 @@ interface MasjidData {
   masjid: {
     name: string;
     mutawalli: {
-      name: string;
+      name_malayalam: string;
+      name_english: string;
       phone: string;
     };
     location: string;
@@ -149,7 +150,7 @@ const Masjids = () => {
                             {/* Mutawalli Info */}
                             <div className="bg-emerald-50 dark:bg-slate-700 p-4 rounded-xl">
                               <h4 className="font-semibold text-slate-800 dark:text-white text-sm mb-2">Mutawalli</h4>
-                              <p className="text-emerald-700 dark:text-emerald-300 font-medium">{masjid.mutawalli.name}</p>
+                              <p className="text-emerald-700 dark:text-emerald-300 font-medium">{masjid.mutawalli.name_english}</p>
                               <p className="text-slate-600 dark:text-slate-300 text-sm">{masjid.mutawalli.phone}</p>
                             </div>
 

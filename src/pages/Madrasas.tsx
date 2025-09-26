@@ -32,12 +32,14 @@ interface MadrasaData {
   unit: string;
   madrasa: {
     name: string;
-    mutawalli: {
-      name: string;
+    sadar_ustad: {
+      name_malayalam: string;
+      name_english: string;
       phone: string;
     };
-    sadar_ustad: {
-      name: string;
+    secretary: {
+      name_malayalam: string;
+      name_english: string;
       phone: string;
     };
     location: string;
@@ -152,22 +154,22 @@ const Madrasas = () => {
                           <div className="space-y-4">
                             {/* Staff Info */}
                             <div className="space-y-3">
-                              <div className="bg-blue-50 dark:bg-slate-700 p-4 rounded-xl">
-                                <h4 className="font-semibold text-slate-800 dark:text-white text-sm mb-2 flex items-center">
-                                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
-                                  Mutawalli
-                                </h4>
-                                <p className="text-blue-700 dark:text-blue-300 font-medium">{madrasa.mutawalli.name}</p>
-                                <p className="text-slate-600 dark:text-slate-300 text-sm">{madrasa.mutawalli.phone}</p>
-                              </div>
-                              
                               <div className="bg-indigo-50 dark:bg-slate-700 p-4 rounded-xl">
                                 <h4 className="font-semibold text-slate-800 dark:text-white text-sm mb-2 flex items-center">
                                   <GraduationCap className="w-4 h-4 mr-2 text-indigo-600" />
                                   Sadar Ustad
                                 </h4>
-                                <p className="text-indigo-700 dark:text-indigo-300 font-medium">{madrasa.sadar_ustad.name}</p>
+                                <p className="text-indigo-700 dark:text-indigo-300 font-medium">{madrasa.sadar_ustad.name_english}</p>
                                 <p className="text-slate-600 dark:text-slate-300 text-sm">{madrasa.sadar_ustad.phone}</p>
+                              </div>
+                              
+                              <div className="bg-blue-50 dark:bg-slate-700 p-4 rounded-xl">
+                                <h4 className="font-semibold text-slate-800 dark:text-white text-sm mb-2 flex items-center">
+                                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
+                                  Madrasa Manager
+                                </h4>
+                                <p className="text-blue-700 dark:text-blue-300 font-medium">{madrasa.secretary.name_english}</p>
+                                <p className="text-slate-600 dark:text-slate-300 text-sm">{madrasa.secretary.phone}</p>
                               </div>
                             </div>
 
@@ -185,30 +187,30 @@ const Madrasas = () => {
                               
                               <div className="grid grid-cols-2 gap-3">
                                 <a
-                                  href={`tel:${madrasa.mutawalli.phone}`}
-                                  className="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-3 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-xs"
-                                >
-                                  <Phone className="w-4 h-4 mr-1" />
-                                  Mutawalli
-                                </a>
-                                
-                                <a
                                   href={`tel:${madrasa.sadar_ustad.phone}`}
                                   className="inline-flex items-center justify-center bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-3 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-xs"
                                 >
                                   <GraduationCap className="w-4 h-4 mr-1" />
                                   Ustad
                                 </a>
+                                
+                                <a
+                                  href={`tel:${madrasa.secretary.phone}`}
+                                  className="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-3 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-xs"
+                                >
+                                  <Phone className="w-4 h-4 mr-1" />
+                                  Manager
+                                </a>
                               </div>
                               
                               <a
-                                href={`https://wa.me/${madrasa.mutawalli.phone.replace(/[^0-9]/g, '')}`}
+                                href={`https://wa.me/${madrasa.secretary.phone.replace(/[^0-9]/g, '')}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-full inline-flex items-center justify-center bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                               >
                                 <MessageCircle className="w-5 h-5 mr-2" />
-                                WhatsApp Mutawalli
+                                WhatsApp Manager
                               </a>
                             </div>
                           </div>

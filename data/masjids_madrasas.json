@@ -4,8 +4,9 @@
     "masjid": {
       "name": "Salafi Masjid Kakkanad",
       "mutawalli": {
-        "name": "PLACEHOLDER",
-        "phone": "PLACEHOLDER"
+        "name_malayalam": "റഫീഖ്",
+        "name_english": "Rafeek",
+        "phone": "+91 93871 10300"
       },
       "location": "https://maps.app.goo.gl/aNw6ZcEZfRGSXWS67?g_st=ac"
     },
@@ -16,8 +17,14 @@
         "phone": "PLACEHOLDER"
       },
       "sadar_ustad": {
-        "name": "Salman Faris Baqavi",
-        "phone": "PLACEHOLDER"
+        "name_malayalam": "സൽമാൻ അൽ ഖാസിമി",
+        "name_english": "Salman Al Qasimi",
+        "phone": "+91 98464 18888"
+      },
+      "secretary": {
+        "name_malayalam": "ഹൈദറോസ്",
+        "name_english": "Hyderose",
+        "phone": "+91 98479 02304"
       },
       "location": "https://maps.app.goo.gl/aNw6ZcEZfRGSXWS67?g_st=ac"
     }
@@ -27,8 +34,9 @@
     "masjid": {
       "name": "Salafi Masjid Athani",
       "mutawalli": {
-        "name": "PLACEHOLDER",
-        "phone": "PLACEHOLDER"
+        "name_malayalam": "നിസാർ",
+        "name_english": "Nisar",
+        "phone": "+91 96334 46181"
       },
       "location": "https://maps.app.goo.gl/eguCi8XpGmGYHVGm8"
     },
@@ -39,8 +47,14 @@
         "phone": "PLACEHOLDER"
       },
       "sadar_ustad": {
-        "name": "Anfal Salafi",
-        "phone": "PLACEHOLDER"
+        "name_malayalam": "അൻഫൽ സലഫി",
+        "name_english": "Anfal Salafi",
+        "phone": "+91 94953 51414"
+      },
+      "secretary": {
+        "name_malayalam": "മുനീർ",
+        "name_english": "Muneer",
+        "phone": "+91 94000 95648"
       },
       "location": "https://maps.app.goo.gl/eguCi8XpGmGYHVGm8"
     }
@@ -50,8 +64,9 @@
     "masjid": {
       "name": "Salafi Masjid Cheranallore",
       "mutawalli": {
-        "name": "PLACEHOLDER",
-        "phone": "PLACEHOLDER"
+        "name_malayalam": "അബ്ദുൽ മജീദ്",
+        "name_english": "Abdul Majeed",
+        "phone": "+91 90203 83771"
       },
       "location": "https://maps.app.goo.gl/nNjZhADwC8xLzuJv7"
     },
@@ -62,8 +77,14 @@
         "phone": "PLACEHOLDER"
       },
       "sadar_ustad": {
-        "name": "Asif Islahi",
-        "phone": "PLACEHOLDER"
+        "name_malayalam": "ആസിഫ് ഇസ്ലാഹി",
+        "name_english": "Asif Islahi",
+        "phone": "+91 85477 67462"
+      },
+      "secretary": {
+        "name_malayalam": "യൂസുഫ്",
+        "name_english": "Yousuf",
+        "phone": "+91 98958 20756"
       },
       "location": "https://maps.app.goo.gl/nNjZhADwC8xLzuJv7"
     }
@@ -73,8 +94,9 @@
     "masjid": {
       "name": "Salafi Masjid Mattakkad",
       "mutawalli": {
-        "name": "PLACEHOLDER",
-        "phone": "PLACEHOLDER"
+        "name_malayalam": "റഹീം",
+        "name_english": "Raheem",
+        "phone": "+91 77365 62636"
       },
       "location": "https://maps.app.goo.gl/BjGvc5Ywiq3zCHU58?g_st=ac"
     },
@@ -85,8 +107,14 @@
         "phone": "PLACEHOLDER"
       },
       "sadar_ustad": {
-        "name": "Niyas Swalahi",
-        "phone": "PLACEHOLDER"
+        "name_malayalam": "നിയാസ്",
+        "name_english": "Niyas Swalahi",
+        "phone": "+91 99476 35343"
+      },
+      "secretary": {
+        "name_malayalam": "അമീൻ",
+        "name_english": "Ameen",
+        "phone": "+91 98950 06004"
       },
       "location": "https://maps.app.goo.gl/BjGvc5Ywiq3zCHU58?g_st=ac"
     }
@@ -96,8 +124,9 @@
     "masjid": {
       "name": "Salafi Masjid Edappally",
       "mutawalli": {
-        "name": "PLACEHOLDER",
-        "phone": "PLACEHOLDER"
+        "name_malayalam": "മുഹമ്മദാലി AM",
+        "name_english": "Muhammed Ali A M",
+        "phone": "+91 98473 95050"
       },
       "location": "https://maps.app.goo.gl/SDYhijru5YTdh2yU9"
     },
@@ -108,8 +137,14 @@
         "phone": "PLACEHOLDER"
       },
       "sadar_ustad": {
-        "name": "Mujeeb Salafi",
-        "phone": "PLACEHOLDER"
+        "name_malayalam": "മുജീബ് സലഫി",
+        "name_english": "Mujeeb Salafi",
+        "phone": "+91 88482 71354"
+      },
+      "secretary": {
+        "name_malayalam": "",
+        "name_english": "Sabbir P M",
+        "phone": "+91 99950 19049"
       },
       "location": "https://maps.app.goo.gl/SDYhijru5YTdh2yU9"
     }
@@ -119,8 +154,9 @@
     "masjid": {
       "name": "Salafi Masjid Kalamassery",
       "mutawalli": {
-        "name": "PLACEHOLDER",
-        "phone": "PLACEHOLDER"
+        "name_malayalam": "നാസർ",
+        "name_english": "Nasar",
+        "phone": "+91 99954 85793"
       },
       "location": "https://maps.app.goo.gl/hkayxiLJVcjWd9uR9"
     },
@@ -131,8 +167,14 @@
         "phone": "PLACEHOLDER"
       },
       "sadar_ustad": {
-        "name": "Abdul Salam Moulavi",
-        "phone": "PLACEHOLDER"
+        "name_malayalam": "അബ്ദുൽ സലാം മൗലവി",
+        "name_english": "Abdul Salam Moulavi",
+        "phone": "+91 94474 19257"
+      },
+      "secretary": {
+        "name_malayalam": "പി. കെ. നിസാർ",
+        "name_english": "P. K. Nisar",
+        "phone": "+91 79946 04857"
       },
       "location": "https://maps.app.goo.gl/hkayxiLJVcjWd9uR9"
     }
@@ -142,8 +184,9 @@
     "masjid": {
       "name": "Salafi Masjid Kangarappady",
       "mutawalli": {
-        "name": "PLACEHOLDER",
-        "phone": "PLACEHOLDER"
+        "name_malayalam": "അബ്ദുനാസർ K A",
+        "name_english": "Abdu Naser K A",
+        "phone": "+91 98091 80001"
       },
       "location": "https://maps.app.goo.gl/B2X3YDfrvrwNNF2H6"
     },
@@ -154,15 +197,16 @@
         "phone": "PLACEHOLDER"
       },
       "sadar_ustad": {
-        "name": "Ithihad Salafi",
-        "phone": "PLACEHOLDER"
+        "name_malayalam": "ഇത്തിഹാദ് സലഫി",
+        "name_english": "Ithihad Salafi",
+        "phone": "+91 94005 88853"
+      },
+      "secretary": {
+        "name_malayalam": "",
+        "name_english": "Abdul Nazar",
+        "phone": "+91 98091 80001"
       },
       "location": "https://maps.app.goo.gl/B2X3YDfrvrwNNF2H6"
     }
-  },
-  {
-    "unit": "Padamugal",
-    "masjid": null,
-    "madrasa": null
   }
 ]
