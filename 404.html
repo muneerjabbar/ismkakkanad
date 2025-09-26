@@ -4,8 +4,13 @@
     <meta charset="utf-8">
     <title>ISM Kakkanad</title>
     <script>
-      // Redirect to home page for custom domain
-      window.location.replace('/');
+      // Store the current path and redirect to index.html with path info
+      var path = window.location.pathname;
+      var search = window.location.search;
+      var hash = window.location.hash;
+      
+      // Redirect to index.html with the path as a query parameter
+      window.location.replace('/index.html?p=' + encodeURIComponent(path) + (search ? '&' + search.slice(1) : '') + hash);
     </script>
   </head>
   <body></body>
