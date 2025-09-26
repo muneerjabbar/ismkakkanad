@@ -191,7 +191,7 @@ const Madrasas = () => {
                                   className="inline-flex items-center justify-center bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-3 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-xs"
                                 >
                                   <GraduationCap className="w-4 h-4 mr-1" />
-                                  Ustad
+                                  Sadar
                                 </a>
                                 
                                 <a
