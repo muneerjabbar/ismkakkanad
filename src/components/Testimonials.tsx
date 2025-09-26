@@ -1,11 +1,13 @@
 
-import { Quote } from "lucide-react";
+import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  CarouselApi,
 } from "@/components/ui/carousel";
 
 interface Testimonial {
@@ -16,6 +18,12 @@ interface Testimonial {
 }
 
 const Testimonials = () => {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const intervalRef = useRef<NodeJS.Timeout>();
+
   const testimonials: Testimonial[] = [
     {
       quote: `ദഅ്'വാ രംഗത്ത് നല്ലൊരു മാതൃകയാണ് ഐ.എസ്.എം. കാക്കനാട് മണ്ഡലം. ദഅ്'വാ രംഗത്ത് വ്യത്യസ്തമായ ഒട്ടനവധി പരിപാടികൾ സംഘടിപ്പിച്ചുകൊണ്ട് മുന്നേറുന്ന കാക്കനാട് മണ്ഡലം, ഐ.ടി. മേഖലയിലെയും പുതിയ വെബ്സൈറ്റ് ലോഞ്ചിലൂടെയും മറ്റുള്ളവർക്കു മാതൃകയാവുകയാണ്. നാഥൻ അനുഗ്രഹിക്കട്ടെ. ഇതെല്ലാം സ്വാലിഹായ അമലായി സ്വീകരിക്കട്ടെ.`,
@@ -61,6 +69,53 @@ const Testimonials = () => {
     }
   ];
 
+  // Auto-scroll functionality
+  useEffect(() => {
+    if (!api) return;
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
+
+  // Auto-play timer
+  useEffect(() => {
+    if (!api || !isAutoPlaying) return;
+
+    intervalRef.current = setInterval(() => {
+      api.scrollNext();
+    }, 10000); // 10 seconds
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [api, isAutoPlaying]);
+
+  const handlePrevious = () => {
+    setIsAutoPlaying(false);
+    api?.scrollPrev();
+    // Resume auto-play after 5 seconds of inactivity
+    setTimeout(() => setIsAutoPlaying(true), 5000);
+  };
+
+  const handleNext = () => {
+    setIsAutoPlaying(false);
+    api?.scrollNext();
+    // Resume auto-play after 5 seconds of inactivity
+    setTimeout(() => setIsAutoPlaying(true), 5000);
+  };
+
+  const handleCardClick = () => {
+    setIsAutoPlaying(false);
+    // Resume auto-play after 5 seconds of inactivity
+    setTimeout(() => setIsAutoPlaying(true), 5000);
+  };
+
   return (
     <section id="testimonials" className="py-12 sm:py-16 lg:py-20 bg-emerald-50 dark:bg-slate-800 transition-colors duration-300">
       <div className="container mx-auto px-4 sm:px-6">
@@ -74,8 +129,9 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto relative">
           <Carousel
+            setApi={setApi}
             opts={{
               align: "start",
               loop: true,
@@ -85,7 +141,10 @@ const Testimonials = () => {
             <CarouselContent className="-ml-2 md:-ml-4">
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <div className="bg-white dark:bg-slate-700 rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+                  <div 
+                    onClick={handleCardClick}
+                    className="bg-white dark:bg-slate-700 rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 h-full cursor-pointer"
+                  >
                     <div className="flex items-center mb-4 sm:mb-6">
                       <Quote className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-600 dark:text-emerald-400 mr-4" />
                       <div className="w-12 h-1 bg-emerald-600 dark:bg-emerald-400"></div>
@@ -117,6 +176,53 @@ const Testimonials = () => {
             <CarouselPrevious className="hidden md:flex" />
             <CarouselNext className="hidden md:flex" />
           </Carousel>
+
+          {/* Mobile Navigation Arrows */}
+          <div className="flex md:hidden justify-between items-center mt-6">
+            <button
+              onClick={handlePrevious}
+              className="flex items-center justify-center w-10 h-10 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg transition-all duration-300 transform hover:scale-105"
+              aria-label="Previous testimonial"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+
+            {/* Dots indicator */}
+            <div className="flex space-x-2">
+              {Array.from({ length: count }).map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => {
+                    setIsAutoPlaying(false);
+                    api?.scrollTo(index);
+                    setTimeout(() => setIsAutoPlaying(true), 5000);
+                  }}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index + 1 === current
+                      ? 'bg-emerald-600 w-6'
+                      : 'bg-slate-300 dark:bg-slate-600'
+                  }`}
+                  aria-label={`Go to testimonial ${index + 1}`}
+                />
+              ))}
+            </div>
+
+            <button
+              onClick={handleNext}
+              className="flex items-center justify-center w-10 h-10 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg transition-all duration-300 transform hover:scale-105"
+              aria-label="Next testimonial"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+
+          {/* Auto-play indicator */}
+          <div className="flex justify-center mt-4">
+            <div className="flex items-center space-x-2 text-sm text-slate-500 dark:text-slate-400">
+              <div className={`w-2 h-2 rounded-full ${isAutoPlaying ? 'bg-emerald-600 animate-pulse' : 'bg-slate-300'}`}></div>
+              <span>{isAutoPlaying ? 'Auto-playing' : 'Paused'}</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
