@@ -4,17 +4,8 @@
     <meta charset="utf-8">
     <title>ISM Kakkanad</title>
     <script>
-      // Based on https://github.com/rafgraph/spa-github-pages
-      (function() {
-        var l = window.location;
-        var repoBase = l.pathname.split('/').slice(0, 2).join('/');
-        l.replace(
-          repoBase + '/index.html?/' +
-          l.pathname.replace(/^\/+/, '').replace(/^(?:[^\/]+\/){1}/, '') +
-          (l.search ? '&' + l.search.slice(1) : '') +
-          l.hash
-        );
-      })();
+      // Redirect to home page for custom domain
+      window.location.replace('/');
     </script>
   </head>
   <body></body>
