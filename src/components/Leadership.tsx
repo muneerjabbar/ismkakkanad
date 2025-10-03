@@ -20,6 +20,12 @@ interface KNMMember {
   image: string;
 }
 
+interface MSMMember {
+  name: string;
+  position: string;
+  image: string;
+}
+
 const Leadership = () => {
   const leaders: Leader[] = [
     {
@@ -33,7 +39,7 @@ const Leadership = () => {
       image: import.meta.env.BASE_URL + 'images/babu.png'
     },
     {
-      name: "Rafeek K.B.",
+      name: "Rafeek K.B",
       position: "Organization Secretary",
       image: import.meta.env.BASE_URL + 'images/rafeeq.png'
     },
@@ -62,6 +68,24 @@ const Leadership = () => {
       position: "Finance",
       phone: "9562117799",
       image: import.meta.env.BASE_URL + 'images/Abdul_Azeez.jpg'
+    }
+  ];
+
+  const msmMembers: MSMMember[] = [
+    {
+      name: "Noufal A.L",
+      position: "President",
+      image: import.meta.env.BASE_URL + 'images/noufal.jpg'
+    },
+    {
+      name: "Muhammed Amal",
+      position: "Secretary",
+      image: import.meta.env.BASE_URL + 'images/amal.jpg'
+    },
+    {
+      name: "Luqman",
+      position: "Treasurer",
+      image: import.meta.env.BASE_URL + 'images/luqman.jpg'
     }
   ];
 
@@ -120,8 +144,8 @@ const Leadership = () => {
             {knmMembers.map((member, index) => (
               <div key={index} className="bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden mx-auto mb-4 border-4 border-emerald-500">
-                  <img 
-                    src={member.image} 
+                  <img
+                    src={member.image}
                     alt={member.name}
                     className="w-full h-full object-cover"
                     onError={(e) => {
@@ -147,14 +171,14 @@ const Leadership = () => {
         {/* Executive Leadership */}
         <div className="mb-16">
           <h3 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white mb-8 text-center">
-          ISM Executive Committee
+            ISM Executive Committee
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {leaders.map((leader, index) => (
               <div key={index} className="bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden mx-auto mb-4 border-4 border-emerald-500">
-                  <img 
-                    src={leader.image} 
+                  <img
+                    src={leader.image}
                     alt={leader.name}
                     className="w-full h-full object-cover"
                     onError={(e) => {
@@ -168,6 +192,36 @@ const Leadership = () => {
                 </h4>
                 <p className="text-emerald-600 dark:text-emerald-400 font-medium">
                   {leader.position}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* MSM Zonal Leaders */}
+        <div className="mb-16">
+          <h3 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-white mb-8 text-center">
+            MSM Zonal Leaders
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
+            {msmMembers.map((member, index) => (
+              <div key={index} className="bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden mx-auto mb-4 border-4 border-emerald-500">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = import.meta.env.BASE_URL + 'placeholder.svg';
+                    }}
+                  />
+                </div>
+                <h4 className="text-lg sm:text-xl font-semibold text-slate-800 dark:text-white mb-2">
+                  {member.name}
+                </h4>
+                <p className="text-emerald-600 dark:text-emerald-400 font-medium">
+                  {member.position}
                 </p>
               </div>
             ))}
